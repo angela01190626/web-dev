@@ -1,7 +1,10 @@
 .wd-whole-page{
     background-color: black;
+    border-style: solid;
+    border-width: 1px;
     border-color: rgb(47, 51, 54);
     padding-left: 16px;
+    padding-right: 16px;
 }
 
 .wd-rounded-corners-all-around {
@@ -14,13 +17,25 @@
 .wd-text-white {color: white;}
 .wd-text-lg {color: lightgray;}
 
-.wd-inner-padded-left{
+.wd-inner-padding{
     padding-left: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
 }
 
-.wd-padded-right {padding-right:12px;}
+.wd-display{display: flex;}
 
-.wd-for-you {color:rgb(29,161,242);}
+.wd-padded-right {
+    float: right;
+    padding-right:12px;
+}
+
+.wd-for-you {
+    color:rgb(29,161,242);
+}
 
 .wd-the-other {
     color:rgb(110, 118, 125);
@@ -41,9 +56,14 @@
 }
 
 .wd-post-image{
-    width: 100px;
-    height: 100px;
     float:right;
-    padding-right: 16px;
-    border-radius: 10px;
+    border-radius: 30px;
+}
+
+.wd-flex{
+    display: flex;
+}
+
+.wd-topic{
+    padding-right: 200px;
 }

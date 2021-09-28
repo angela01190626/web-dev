@@ -324,15 +324,49 @@
     flex-basis: 100%;
 }
 
-@media (min-width: 0px) and (max-width: 300px) {
+/*My macbook only work for 1600px width screen size*/
+
+@media (min-width: 0px) and (max-width: 1600px) {
     body {
-        background-color: yellow;
+        background-color: pink;
     }
     .media-query {
         background-color: red;
         color: white;
     }
 }
+
+@media (min-width: 0px) and (max-width: 1600px) {
+    table{
+        border-style: dashed;
+        border-width: 5px;
+        border-color: darkgreen;
+        border-radius: 10px;
+    }
+
+    h2 {
+        background-color: black;
+        color: mediumpurple;
+    }
+
+    h3{
+        background-color: darkblue;
+        color: deeppink;
+    }
+
+    p{
+        background-color: darkgreen;
+        color: #ff7070;
+        text-align: center;
+    }
+
+    .media-query1 {
+        background-color: darkorange;
+        color: white;
+    }
+}
+
+
 
 
 
