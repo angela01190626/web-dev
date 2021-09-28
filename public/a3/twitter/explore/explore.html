@@ -10,19 +10,17 @@
 <body>
     <div class = "wd-whole-page">
         <div class = "wd-inner-padding">
-            <label for = "search-twitter"></label>
-            <input id = "search-twitter" type = "search" class = "wd-bg-color-darkgray wd-rounded-corners-all-around "
-                   placeholder="Search Twitter">
-            <i class="fa fa-search" style="color: white"></i>
-
+            <label for = "search" style="position:relative">
+                <i class="fa fa-search wd-search-icon" style="color: white;position:absolute; left:10px; bottom: 2.5px"></i>
+                <input id="search" type="search" class = "wd-rounded-corners-all-around wd-input-field"
+                       placeholder="Search Twitter">
+            </label>
             <a href="explore-settings.html">
-            <i class ="fa fa-gear wd-padded-right"></i>
+                <i class ="fa fa-gear wd-padded-right" style="color: rgb(29,161,242)"></i>
             </a>
-
         </div>
-
         <div class = "wd-inner-padding">
-            <a class = "wd-for-you wd-link-fonts-padding" href="#">For you</a>
+            <a class = "wd-for-you" href="#">For you</a>
             <a class = "wd-the-other" href="#">Trending</a>
             <a class = "wd-the-other" href="#">COVID-19</a>
             <a class = "wd-the-other" href="#">News</a>
@@ -42,40 +40,45 @@
             5,218 Tweets
         </div>
 
-        <div class = "wd-posts" style = "height: 150px">
-
-            <span class = "wd-text-lg"> COVID-19 </span> • LIVE<br>
-            <span class = "wd-text-white" >COVID-19: News and updates for Massachusetts</span><br>
-
-            <div class = "wd-padded-right">
-            <img class = "wd-post-image wd-flex" src = "images/covid-19.jpeg"
-                 width = "100px" height = "100px"/>
+        <div class = "wd-posts" style = "height: 120px">
+            <div style="position: absolute">
+                <span class = "wd-text-lg"> COVID-19 </span> • LIVE<br>
+                <span class = "wd-text-white" ><b>COVID-19: News and updates for Massachusetts</b> </span><br>
+            </div>
+            <div>
+                <img class = "wd-post-image" src = "images/covid-19.jpeg"
+                     width = "100px" height = "100px"/>
             </div>
         </div>
-        <div class = "wd-posts" style = "height: 150px">
-            <span class = "wd-text-lg"> Concert </span> • LIVE<br>
-            <span class = "wd-text-white" >Welcome to Justin Bieber's Concert! </span><br>
-
-            <div class = "wd-padded-right">
-                <img class = "wd-post-image" align = "right" src = "images/concert.jpeg"
+        <div class = "wd-posts" style = "height: 120px">
+            <div style="position: absolute">
+                <span class = "wd-text-lg"> Concert </span> • LIVE<br>
+                <span class = "wd-text-white" ><b>Welcome to Justin Bieber's Concert!</b> </span><br>
+            </div>
+            <div>
+                <img class = "wd-post-image" src = "images/concert.jpeg"
                          width = "100px" height = "100px"/>
             </div>
         </div>
 
-        <div class = "wd-posts" style = "height: 150px">
-            <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>
-            <span class = "wd-text-white"> Long Hours, Low Pay, Loneliness and a Booming Industry </span>
+        <div class = "wd-posts" style = "height: 120px">
+            <div style="position: absolute">
+                <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>
+                <span class = "wd-text-white"><b> Long Hours, Low Pay, Loneliness and a Booming Industry </b></span>
+            </div>
             <div class = "wd-padded-right">
-                <img class = "wd-post-image" align = "right" src = "images/NYTimes.jpeg"
+                <img class = "wd-post-image" src = "images/NYTimes.jpeg"
                      width = "100px" height = "100px"/>
             </div>
         </div>
 
-        <div class = "wd-posts" style = "height: 150px">
-            <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>
-            <span class = "wd-text-white"> An Energy Crisis Is the Latest Threat to Food Supplies </span>
-            <div class = "wd-padded-right">
-                <img class = "wd-post-image" align = "right" src = "images/BO.jpeg"
+        <div class = "wd-posts" style = "height: 120px">
+            <div style="position: absolute">
+                <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>
+                <span class = "wd-text-white"><b>An Energy Crisis Is the Latest Threat to Food Supplies</b></span>
+            </div>
+            <div>
+                <img class = "wd-post-image" src = "images/BO.jpeg"
                      width = "100px" height = "100px"/>
             </div>
         </div>
