@@ -11,6 +11,13 @@
     color: white;
 }
 
+.rotate-list-counter-clockwise {
+    transform: rotate(-30deg);
+    width: 100px;
+    background-color: red;
+    color: green;
+}
+
 .rotate-list-items li {
     width: 100px;
     text-align: right;
@@ -31,6 +38,10 @@
 
 .rotate-image {
     transform: rotate(-10deg);
+}
+
+.rotate-my-image {
+    transform: rotate(40deg);
 }
 
 .rotate-table {
@@ -86,10 +97,10 @@
 
 .gradients-positioned {
     background:
-            radial-gradient(at top right, pink, deeppink);
+            radial-gradient(at top right, white, deeppink);
     width: 200px;
     height: 200px;
-    color: white;
+    color: gray;
 }
 
 .animation-keyframes-exp {
@@ -312,6 +323,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.flex-container-9 {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
 .flex-container-8 {
