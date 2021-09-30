@@ -72,6 +72,10 @@
     max-width: 504px;
 }
 
+.wd-padded-left{
+    padding-left: 12px;
+}
+
 .wd-border-content{
     color: lightgray;
     border-style: solid;
@@ -116,4 +120,8 @@
 
 .wd-padding-bottom{
     padding-bottom: 12px;
+}
+
+.wd-fg-color{
+    color: lightgray;
 }
