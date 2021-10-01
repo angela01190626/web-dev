@@ -346,27 +346,19 @@
 
 /*My macbook only work for 1600px width screen size*/
 
-@media (min-width: 0px) and (max-width: 1600px) {
+@media (min-width: 0px) and (max-width: 600px) {
     body {
-        background-color: pink;
+        background-color: yellow;
     }
-    .media-query {
-        background-color: red;
-        color: white;
-    }
-}
-
-@media (min-width: 0px) and (max-width: 1600px) {
     table{
         border-style: dashed;
         border-width: 5px;
-        border-color: darkgreen;
+        border-color: darkorange;
         border-radius: 10px;
     }
-
     h2 {
-        background-color: black;
-        color: mediumpurple;
+        background-color: chocolate;
+        color: honeydew;
     }
 
     h3{
@@ -375,16 +367,115 @@
     }
 
     p{
-        background-color: darkgreen;
+        background-color: royalblue;
         color: #ff7070;
         text-align: center;
     }
 
-    .media-query1 {
-        background-color: darkorange;
+    .media-query {
+        background-color: red;
         color: white;
     }
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        background-color: blue;
+        color: white;
+    }
+    table{
+        border-style: dashed;
+        border-width: 5px;
+        border-color: darkgreen;
+        border-radius: 10px;
+    }
+    h2 {
+        background-color: bisque;
+        color: palevioletred;
+    }
+    h3{
+        background-color: darkgray;
+        color: deeppink;
+        border-radius: 10px;
+    }
+
+    p{
+        background-color: lightyellow;
+        color: #ff7070;
+        text-align: center;
+    }
+
+    .media-query {
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+    body {
+        background-color: lightpink;
+        color: white;
+    }
+    table{
+        border-style: dashed;
+        border-width: 5px;
+        border-color: darkblue;
+        border-radius: 10px;
+    }
+    h2 {
+        background-color: #61dafb;
+        color: rebeccapurple;
+    }
+
+    h3{
+        background-color: red;
+        color: wheat;
+    }
+
+    p{
+        background-color: darkolivegreen;
+        color: #ff7070;
+        text-align: center;
+    }
+
+    .media-query {
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media (min-width: 1800px) {
+    body {
+        background-color: deeppink;
+        color: white;
+    }
+    table{
+        border-style: dashed;
+        border-width: 5px;
+        border-color: black;
+        border-radius: 10px;
+    }
+    h2 {
+        background-color: black;
+        color: mediumpurple;
+    }
+
+    h3{
+        background-color: palevioletred;
+        color: wheat;
+    }
+
+    p{
+        background-color: darkgoldenrod;
+        color: #ff7070;
+        text-align: center;
+    }
+
+    .media-query {
+        background-color: yellow;
+        color: black;
+    }
+}
+
 
 
 
