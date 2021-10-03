@@ -34,7 +34,7 @@
     border-style: none;
     border-radius: 50px;
 }
-::placeholder {color: lightgray;}
+::placeholder {color: darkgray;}
 
 .wd-search-gear{
     padding-left: 16px;
@@ -45,10 +45,20 @@
 }
 
 .wd-search-icon{
-    color: lightgray;
+    color: darkgray;
     position:absolute;
     padding-top: 10px;
     padding-left: 8px;
+}
+
+.nav-tabs .nav-item.active{
+    background-color: black;
+    color:rgb(29,161,242);
+    border-style: none;
+}
+
+.nav-tabs.wd-override-border{
+    border-style: none;
 }
 
 .wd-avatar-image{
@@ -74,6 +84,19 @@
     background-color: white;
 }
 
+.form-control .wd-input-field{
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: none;
+    border-radius: 50px;
+}
+
+.wd-middle-border{
+    border-style: solid;
+    border-color: rgb(110, 118, 125);
+    border-width: 0px 1px 1px 1px;
+}
 .wd-top-hyperlink-borders{
     border-style: solid;
     border-width: 0px 1px 1px 1px;
@@ -95,20 +118,6 @@
     border-style: solid;
     border-width: 1px;
     border-color: rgb(47, 51, 54);
-}
-
-.form-control .wd-input-field{
-    padding-left: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-style: none;
-    border-radius: 50px;
-}
-
-.wd-middle-border{
-    border-style: solid;
-    border-color: rgb(110, 118, 125);
-    border-width: 0px 1px 1px 1px;
 }
 
 .wd-display{display: flex;}
