@@ -3,75 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Explore</title>
-    <link href="explore.css" rel="stylesheet"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="explore.css" rel="stylesheet"/>
 </head>
 
-<body>
-    <div class="ms-2 me-2 mb-2 mt-2">
+<body class="wd-bg-black">
+<!--    <h2>Hiding and showing responsive content</h2>-->
+<!--    <div class="d-block d-sm-none fa-2x">XS</div>-->
+<!--    <div class="d-none d-sm-block d-md-none fa-2x">S</div>-->
+<!--    <div class="d-none d-md-block d-lg-none fa-2x">M</div>-->
+<!--    <div class="d-none d-lg-block d-xl-none fa-2x">L</div>-->
+<!--    <div class="d-none d-xl-block d-xxl-none fa-2x">XL</div>-->
+<!--    <div class="d-none d-xxl-block fa-2x">XXL</div>-->
+
+<!--    col-sm-2 col-md-1 col-lg-1 col-xl-2 col-xxl-2
+col-sm-10 col-md-11 col-lg-7 col-xl-7 col-xxl-6
+col-lg-4 col-xl-3 col-xxl-4
+-->
+    <div class="m-2">
         <div class = "row">
-            <div class = "col-2">
+            <div class = "col-2 col-lg-1 col-xl-2">
                 <div class = "list-group">
-                    <a class="list-group-item">
+                    <a class="list-group-item wd-override-bg">
                         <i class = "fab fa-twitter"></i>
                     </a>
-                    <a class="list-group-item" href = "../home.html">
-                            <i class = "fa fa-home wd-fg-color">
-                                <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
-                                    Home
-                                </span>
-                            </i>
+                    <a class="list-group-item wd-override-bg" href = "../home.html">
+                        <i class = "fa fa-home">
+                            <span class="d-none d-xl-inline-block">
+                                Home
+                            </span>
+                        </i>
                     </a>
-                    <a class="list-group-item active" href = "explore.html">
-                        <i class = "fa fa-hashtag wd-fg-color">
-                            <span class="pl-2 d-none d-xl-block">
+                    <a class="list-group-item wd-override-bg active" href = "explore.html">
+                        <i class = "fa fa-hashtag">
+                            <span class="d-none d-xl-inline-block">
                                 Explore
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item" href = "../notifications.html">
-                        <i class = "fa fa-bell wd-fg-color">
-                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                    <a class="list-group-item wd-override-bg" href = "../notifications.html">
+                        <i class = "fa fa-bell">
+                            <span class="d-none d-xl-inline-block">
                                 Notifications
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item" href = "../messages.html">
-                        <i class = "fa fa-envelope wd-fg-color">
-                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                    <a class="list-group-item wd-override-bg" href = "../messages.html">
+                        <i class = "fa fa-envelope">
+                            <span class="d-none d-xl-inline-block">
                                 Messages
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item" href = "../bookmarks/bookmarks.html">
-                        <i class = "fa fa-bookmark wd-fg-color">
-                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                    <a class="list-group-item wd-override-bg" href = "../bookmarks/bookmarks.html">
+                        <i class = "fa fa-bookmark">
+                            <span class="d-none d-xl-inline-block">
                                 Bookmarks
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item" href = "../lists.html">
-                        <i class = "fa fa-list wd-fg-color">
-                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                    <a class="list-group-item wd-override-bg" href = "../lists.html">
+                        <i class = "fa fa-list">
+                            <span class="d-none d-xl-inline-block">
                                 Lists
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item" href = "../profile.html">
-                        <i class = "fa fa-user wd-fg-color">
-                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                    <a class="list-group-item wd-override-bg" href = "../profile.html">
+                        <i class = "fa fa-user">
+                            <span class="d-none d-xl-inline-block">
                                 Profile
                             </span>
                         </i>
                     </a>
-                    <a class="list-group-item ps-1" href = "../more.html">
-                            <span class="fa-stack fa-1x pe-0 wd-fg-color pe-0">
+                    <a class="list-group-item ps-1 wd-override-bg" href = "../more.html">
+                            <span class="fa-stack fa-1x pe-0 pe-0">
                                 <i class="fas fa-circle fa-stack-1x"></i>
-                                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse wd-fg-black"></i>
                             </span>
-                            <span class="wd-fg-color d-none d-l-block d-xl-block d-xll-block">
+                            <span class="d-none d-xl-inline-block">
                                 More
                             </span>
                     </a>
@@ -82,16 +95,17 @@
                     </button>
                 </div>
             </div>
-            <div class = "col-6">
+
+            <div class = "col-10 col-lg-8 col-xl-7 col-xxl-6">
                 <div class="row">
                     <div class="col-10">
                         <i class="fa fa-search wd-search-icon"></i>
-                        <input class ="form-control wd-input-field wd-rounded-corners-all-around"  type="search"
+                        <input class ="form-control wd-input-field wd-rounded-corners-all-around wd-search-color"  type="search"
                                placeholder="Search Twitter" style="padding-left: 30px;border-radius: 50px">
                     </div>
                     <div class="col-2">
                         <a href="explore-settings.html">
-                            <i class ="fas fa-cog fa-2x wd-padded-right" style="color: rgb(29,161,242)"></i>
+                            <i class ="fas fa-cog fa-2x wd-padded-right" style="color: white"></i>
                         </a>
                     </div>
                 </div>
@@ -118,14 +132,14 @@
                             </span>
                         </a>
                     </li>
-                    <li class = "nav-link nav-item">
+                    <li class = "nav-link nav-item d-none d-sm-block">
                         <a class = "wd-the-other" href="sports.html">
                             <span class="wd-fg-blue">
                                 Sports
                             </span>
                         </a>
                     </li>
-                    <li class = "nav-link nav-item d-sm-none d-md-block">
+                    <li class = "nav-link nav-item d-none d-md-block">
                         <a class = "wd-the-other" href="entertainment.html">
                             <span class="wd-fg-blue">
                                 Entertainment
@@ -133,8 +147,8 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="list-group pt-2">
-                    <li class = "list-group-item ps-0 pe-0 pt-0 pb-0">
+                <ul class="list-group pt-2 wd-middle-border">
+                    <li class = "list-group-item ps-0 pe-0 pt-0 pb-0 wd-bg-black">
                         <div style="position: relative">
                             <img src="images/starship.jpeg" width="100%"/>
                             <div style="position: absolute; bottom: 8px; left: 8px; color: white; font-size: 30px">
@@ -142,11 +156,11 @@
                             </div>
                         </div>
                     </li>
-                    <li class = "list-group-item">
+                    <li class = "list-group-item wd-bg-black wd-fg-white">
                         <div class="row">
                             <div class="col-9">
-                                Web Development<br>
-                                <b>ReactJS</b> <i class="fa fa-check-circle"></i> - 2h<br>
+                                <span class="wd-fg-posts"> Web Development</span><br>
+                                <b>ReactJS</b> <i class="fa fa-check-circle"></i><span class="wd-fg-posts"> - 2h</span><br>
                                 <b>React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs</b><br>
                             </div>
                             <div class="col-3">
@@ -154,36 +168,36 @@
                             </div>
                         </div>
                     </li>
-                    <li class = "list-group-item">
+                    <li class = "list-group-item wd-bg-black wd-fg-white">
                         <div class="row">
                             <div class="col-9">
-                                JavaScript <i class="fa fa-check-circle"></i> - 2h<br>
+                                JavaScript <i class="fa fa-check-circle"></i><span class="wd-fg-posts"> - 2h</span><br>
                                 <b>JavaScript is programming language that can run on browsers as well as desktops</b><br>
-                                123K Tweets
+                                <span class="wd-fg-posts">123K Tweets</span>
                             </div>
                             <div class="col-3">
                                 <img src="images/js.png" class="wd-all-rounded-image" alt="javascript" style="float: right"/>
                             </div>
                         </div>
                     </li>
-                    <li class = "list-group-item">
+                    <li class = "list-group-item wd-bg-black wd-fg-white">
                         <div class="row">
                             <div class="col-9">
-                                Web Development<br>
+                                <span class="wd-fg-posts">Web Development</span><br>
                                 <b>jQuery</b><br>
-                                123K Tweets
+                                <span class="wd-fg-posts">123K Tweets</span>
                             </div>
                             <div class="col-3">
                                 <img src="images/jquery.jpeg" class="wd-all-rounded-image" alt="jquery" style="float: right"/>
                             </div>
                         </div>
                     </li>
-                    <li class = "list-group-item">
+                    <li class = "list-group-item wd-bg-black wd-fg-white">
                         <div class="row">
                             <div class="col-9">
-                                Web Development<br>
+                                <span class="wd-fg-posts">Web Development</span><br>
                                 <b>NodeJS</b> <i class="fa fa-check-circle"></i> - 2h<br>
-                                123K Tweets
+                                <span class="wd-fg-posts">123K Tweets</span>
                             </div>
                             <div class="col-3">
                                 <img src="images/nodejs.png" class="wd-all-rounded-image" alt="nodejs" style="float: right"/>
@@ -192,139 +206,89 @@
                     </li>
                 </ul>
             </div>
-<!--                <div >-->
-<!--                    Trending in Science<br>-->
-<!--                    <span class = "wd-text-white" >Starship</span><br>-->
-<!--                    55.5K Tweets-->
-<!--                </div>-->
 
-<!--                <div class = "wd-posts wd-inner-padding">-->
-<!--                    Sports • Trending<br>-->
-<!--                    <span class = "wd-text-white" >Joe Rogan</span><br>-->
-<!--                    5,218 Tweets-->
-<!--                </div>-->
-
-<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
-<!--                    <div style="position: absolute">-->
-<!--                        COVID-19 • LIVE<br>-->
-<!--                        <span class = "wd-text-white" ><b>COVID-19: News and updates for Massachusetts</b> </span><br>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <img class = "wd-post-image" src = "images/covid-19.jpeg"-->
-<!--                             width = "100px" height = "100px"/>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
-<!--                    <div style="position: absolute">-->
-<!--                        Concert • LIVE<br>-->
-<!--                        <span class = "wd-text-white" ><b>Welcome to Justin Bieber's Concert!</b> </span><br>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <img class = "wd-post-image" src = "images/concert.jpeg"-->
-<!--                                 width = "100px" height = "100px"/>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
-<!--                    <div style="position: absolute">-->
-<!--                        <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>-->
-<!--                        <span class = "wd-text-white"><b> Long Hours, Low Pay, Loneliness and a Booming Industry </b></span>-->
-<!--                    </div>-->
-<!--                    <div class = "wd-padded-right">-->
-<!--                        <img class = "wd-post-image" src = "images/NYTimes.jpeg"-->
-<!--                             width = "100px" height = "100px"/>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
-<!--                    <div style="position: absolute">-->
-<!--                        <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>-->
-<!--                        <span class = "wd-text-white"><b>An Energy Crisis Is the Latest Threat to Food Supplies</b></span>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <img class = "wd-post-image" src = "images/BO.jpeg"-->
-<!--                             width = "100px" height = "100px"/>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-            <div class = "col-4 d-none d-lg-block">
-                <ul class = "list-group">
-                    <li class="list-group-item">
+            <div class = "col-lg-3 col-xl-3 col-xxl-4 d-none d-lg-block">
+                <ul class = "list-group wd-follow-border">
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         Who to follow
                     </li>
-                    <li class="list-group-item">
+
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-lg-2 col-xl-2 col-xxl-2">
                                 <img src="images/java.png" class="wd-avatar-image" alt="java">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-7">
                                 Java <i class="fa fa-check-circle"></i><br>
-                                @Java
+                                <span class ="wd-fg-posts">@Java</span>
                             </div>
-                            <div class="col-3">
-                                <button class = "btn btn-primary wd-btn-border">
+                            <div class="col-lg-4 col-xl-4 col-xxl-3">
+                                <button class = "btn btn-primary wd-btn-border wd-btn-follow">
                                     Follow
                                 </button>
                             </div>
-                    <li class="list-group-item">
+                        </div>
+                    </li>
+
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-lg-2 col-xl-2 col-xxl-2">
                                 <img src="images/relativityspace.jpeg" class="wd-avatar-image" alt="relativity space">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-7">
                                 Relativity Space <i class="fa fa-check-circle"></i><br>
-                                @relativityspace
+                                <span class ="wd-fg-posts">@relativityspace</span>
                             </div>
-                            <div class="col-3">
-                                <button class = "btn btn-primary wd-btn-border">
+                            <div class="col-lg-4 col-xl-4 col-xxl-3">
+                                <button class = "btn btn-primary wd-btn-border wd-btn-follow">
                                     Follow
                                 </button>
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-lg-2 col-xl-2 col-xxl-2">
                                 <img src="images/virgingalactic.png" class="wd-avatar-image" alt="virgin galactic">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-7">
                                 Virgin Galactic <i class="fa fa-check-circle"></i><br>
-                                @virgingalactic
+                                <span class ="wd-fg-posts"> @virgingalactic</span>
                             </div>
-                            <div class="col-3">
-                                <button class = "btn btn-primary wd-btn-border">
+                            <div class="col-lg-4 col-xl-4 col-xxl-3">
+                                <button class = "btn btn-primary wd-btn-border wd-btn-follow">
                                     Follow
                                 </button>
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-lg-2 col-xl-2 col-xxl-2">
                                 <img src="images/nasa.png" class="wd-avatar-image" alt="nasa logo">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-7">
                                 NASA <i class="fa fa-check-circle"></i><br>
-                                @NASA
+                                <span class ="wd-fg-posts">@NASA</span>
                             </div>
-                            <div class="col-3">
-                                <button class = "btn btn-primary wd-btn-border">
+                            <div class="col-lg-4 col-xl-4 col-xxl-3">
+                                <button class = "btn btn-primary wd-btn-border wd-btn-follow">
                                     Follow
                                 </button>
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item wd-bg-follow wd-fg-white">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="col-lg-2 col-xl-2 col-xxl-2">
                                 <img src="images/tesla.png" class="wd-avatar-image" alt="tesla logo">
                             </div>
-                            <div class="col-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-7">
                                 Tesla <i class="fa fa-check-circle"></i><br>
-                                @Tesla
+                                <span class ="wd-fg-posts">@Tesla</span>
                             </div>
-                            <div class="col-3">
-                                <button class = "btn btn-primary wd-btn-border">
+                            <div class="col-lg-4 col-xl-4 col-xxl-3">
+                                <button class = "btn btn-primary wd-btn-border wd-btn-follow">
                                     Follow
                                 </button>
                             </div>
@@ -334,6 +298,61 @@
             </div>
         </div>
     </div>
+
+        <!--                <div >-->
+        <!--                    Trending in Science<br>-->
+        <!--                    <span class = "wd-text-white" >Starship</span><br>-->
+        <!--                    55.5K Tweets-->
+        <!--                </div>-->
+
+        <!--                <div class = "wd-posts wd-inner-padding">-->
+        <!--                    Sports • Trending<br>-->
+        <!--                    <span class = "wd-text-white" >Joe Rogan</span><br>-->
+        <!--                    5,218 Tweets-->
+        <!--                </div>-->
+
+        <!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+        <!--                    <div style="position: absolute">-->
+        <!--                        COVID-19 • LIVE<br>-->
+        <!--                        <span class = "wd-text-white" ><b>COVID-19: News and updates for Massachusetts</b> </span><br>-->
+        <!--                    </div>-->
+        <!--                    <div>-->
+        <!--                        <img class = "wd-post-image" src = "images/covid-19.jpeg"-->
+        <!--                             width = "100px" height = "100px"/>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+        <!--                    <div style="position: absolute">-->
+        <!--                        Concert • LIVE<br>-->
+        <!--                        <span class = "wd-text-white" ><b>Welcome to Justin Bieber's Concert!</b> </span><br>-->
+        <!--                    </div>-->
+        <!--                    <div>-->
+        <!--                        <img class = "wd-post-image" src = "images/concert.jpeg"-->
+        <!--                                 width = "100px" height = "100px"/>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+
+        <!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+        <!--                    <div style="position: absolute">-->
+        <!--                        <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>-->
+        <!--                        <span class = "wd-text-white"><b> Long Hours, Low Pay, Loneliness and a Booming Industry </b></span>-->
+        <!--                    </div>-->
+        <!--                    <div class = "wd-padded-right">-->
+        <!--                        <img class = "wd-post-image" src = "images/NYTimes.jpeg"-->
+        <!--                             width = "100px" height = "100px"/>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+
+        <!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+        <!--                    <div style="position: absolute">-->
+        <!--                        <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>-->
+        <!--                        <span class = "wd-text-white"><b>An Energy Crisis Is the Latest Threat to Food Supplies</b></span>-->
+        <!--                    </div>-->
+        <!--                    <div>-->
+        <!--                        <img class = "wd-post-image" src = "images/BO.jpeg"-->
+        <!--                             width = "100px" height = "100px"/>-->
+        <!--                    </div>-->
+        <!--                </div>-->
 
 </body>
 </html>
