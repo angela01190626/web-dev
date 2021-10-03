@@ -1,91 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Explore</title>
     <link href="explore.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 </head>
 
 <body>
-    <div class = "wd-whole-page">
-        <div class = "wd-search-gear">
-            <label for = "search" style="position:relative">
-                <i class="fa fa-search wd-search-icon"></i>
-                <input id="search" type="search" class = "wd-rounded-corners-all-around wd-input-field"
-                       placeholder="Search Twitter">
-            </label>
-            <a href="explore-settings.html">
-                <i class ="fa fa-gear wd-padded-right" style="color: rgb(29,161,242)"></i>
-            </a>
-        </div>
-
-        <div class = "wd-top-hyperlink-borders">
-            <a class = "wd-for-you" href="#"><span class = "wd-border-for-you" >For you</span></a>
-            <a class = "wd-the-other" href="#">Trending</a>
-            <a class = "wd-the-other" href="#">COVID-19</a>
-            <a class = "wd-the-other" href="#">News</a>
-            <a class = "wd-the-other" href="#">Sports</a>
-            <a class = "wd-the-other" href="#">Entertainment</a>
-        </div>
-
-        <div class = "wd-posts wd-inner-padding">
-            Trending in Science<br>
-            <span class = "wd-text-white" >Starship</span><br>
-            55.5K Tweets
-        </div>
-
-        <div class = "wd-posts wd-inner-padding">
-            Sports • Trending<br>
-            <span class = "wd-text-white" >Joe Rogan</span><br>
-            5,218 Tweets
-        </div>
-
-        <div class = "wd-posts wd-inner-padding" style = "height: 120px">
-            <div style="position: absolute">
-                COVID-19 • LIVE<br>
-                <span class = "wd-text-white" ><b>COVID-19: News and updates for Massachusetts</b> </span><br>
+    <div class="ms-2 me-2 mb-2 mt-2">
+        <div class = "row">
+            <div class = "col-2">
+                <div class = "list-group">
+                    <a class="list-group-item">
+                        <i class = "fab fa-twitter"></i>
+                    </a>
+                    <a class="list-group-item" href = "../home.html">
+                            <i class = "fa fa-home wd-fg-color">
+                                <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                    Home
+                                </span>
+                            </i>
+                    </a>
+                    <a class="list-group-item active" href = "explore.html">
+                        <i class = "fa fa-hashtag wd-fg-color">
+                            <span class="pl-2 d-none d-xl-block">
+                                Explore
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item" href = "../notifications.html">
+                        <i class = "fa fa-bell wd-fg-color">
+                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                Notifications
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item" href = "../messages.html">
+                        <i class = "fa fa-envelope wd-fg-color">
+                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                Messages
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item" href = "../bookmarks/bookmarks.html">
+                        <i class = "fa fa-bookmark wd-fg-color">
+                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                Bookmarks
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item" href = "../lists.html">
+                        <i class = "fa fa-list wd-fg-color">
+                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                Lists
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item" href = "../profile.html">
+                        <i class = "fa fa-user wd-fg-color">
+                            <span class="pl-2 d-none d-l-block d-xl-block d-xll-block">
+                                Profile
+                            </span>
+                        </i>
+                    </a>
+                    <a class="list-group-item ps-1" href = "../more.html">
+                            <span class="fa-stack fa-1x pe-0 wd-fg-color pe-0">
+                                <i class="fas fa-circle fa-stack-1x"></i>
+                                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="wd-fg-color d-none d-l-block d-xl-block d-xll-block">
+                                More
+                            </span>
+                    </a>
+                </div>
+                <div class = "pt-2">
+                    <button class = "btn btn-primary wd-btn-border" style="width: 100%">
+                        Tweet
+                    </button>
+                </div>
             </div>
-            <div>
-                <img class = "wd-post-image" src = "images/covid-19.jpeg"
-                     width = "100px" height = "100px"/>
+            <div class = "col-6">
+                <div class="row">
+                    <div class="col-10">
+                        <i class="fa fa-search wd-search-icon"></i>
+                        <input class ="form-control wd-input-field wd-rounded-corners-all-around"  type="search"
+                               placeholder="Search Twitter" style="padding-left: 30px;border-radius: 50px">
+                    </div>
+                    <div class="col-2">
+                        <a href="explore-settings.html">
+                            <i class ="fas fa-cog fa-2x wd-padded-right" style="color: rgb(29,161,242)"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class = "nav nav-tabs pt-2 pb-2">
+                    <li class = "nav-link nav-item active">
+                        <a class = "wd-for-you" href="foryou.html">
+                            <span class=" wd-fg-gray">
+                                For you
+                            </span>
+                        </a>
+                    </li>
+                    <li class = "nav-link nav-item">
+                        <a class = "wd-the-other" href="trending.html">
+                            <span class="wd-fg-blue">
+                                Trending
+                            </span>
+                        </a>
+                    </li>
+                    <li class = "nav-link nav-item">
+                        <a class = "wd-the-other" href="news.html">
+                            <span class="wd-fg-blue">
+                                News
+                            </span>
+                        </a>
+                    </li>
+                    <li class = "nav-link nav-item">
+                        <a class = "wd-the-other" href="sports.html">
+                            <span class="wd-fg-blue">
+                                Sports
+                            </span>
+                        </a>
+                    </li>
+                    <li class = "nav-link nav-item d-sm-none d-md-block">
+                        <a class = "wd-the-other" href="entertainment.html">
+                            <span class="wd-fg-blue">
+                                Entertainment
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-group pt-2">
+                    <li class = "list-group-item ps-0 pe-0 pt-0 pb-0">
+                        <div style="position: relative">
+                            <img src="images/starship.jpeg" width="100%"/>
+                            <div style="position: absolute; bottom: 8px; left: 8px; color: white; font-size: 30px">
+                                <b>SpaceX's Starship</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "list-group-item">
+                        <div class="row">
+                            <div class="col-9">
+                                Web Development<br>
+                                <b>ReactJS</b> <i class="fa fa-check-circle"></i> - 2h<br>
+                                <b>React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs</b><br>
+                            </div>
+                            <div class="col-3">
+                                <img src="images/reactjs.png" class="wd-all-rounded-image" alt="reactjs" style="float: right"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "list-group-item">
+                        <div class="row">
+                            <div class="col-9">
+                                JavaScript <i class="fa fa-check-circle"></i> - 2h<br>
+                                <b>JavaScript is programming language that can run on browsers as well as desktops</b><br>
+                                123K Tweets
+                            </div>
+                            <div class="col-3">
+                                <img src="images/js.png" class="wd-all-rounded-image" alt="javascript" style="float: right"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "list-group-item">
+                        <div class="row">
+                            <div class="col-9">
+                                Web Development<br>
+                                <b>jQuery</b><br>
+                                123K Tweets
+                            </div>
+                            <div class="col-3">
+                                <img src="images/jquery.jpeg" class="wd-all-rounded-image" alt="jquery" style="float: right"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "list-group-item">
+                        <div class="row">
+                            <div class="col-9">
+                                Web Development<br>
+                                <b>NodeJS</b> <i class="fa fa-check-circle"></i> - 2h<br>
+                                123K Tweets
+                            </div>
+                            <div class="col-3">
+                                <img src="images/nodejs.png" class="wd-all-rounded-image" alt="nodejs" style="float: right"/>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+<!--                <div >-->
+<!--                    Trending in Science<br>-->
+<!--                    <span class = "wd-text-white" >Starship</span><br>-->
+<!--                    55.5K Tweets-->
+<!--                </div>-->
+
+<!--                <div class = "wd-posts wd-inner-padding">-->
+<!--                    Sports • Trending<br>-->
+<!--                    <span class = "wd-text-white" >Joe Rogan</span><br>-->
+<!--                    5,218 Tweets-->
+<!--                </div>-->
+
+<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+<!--                    <div style="position: absolute">-->
+<!--                        COVID-19 • LIVE<br>-->
+<!--                        <span class = "wd-text-white" ><b>COVID-19: News and updates for Massachusetts</b> </span><br>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img class = "wd-post-image" src = "images/covid-19.jpeg"-->
+<!--                             width = "100px" height = "100px"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+<!--                    <div style="position: absolute">-->
+<!--                        Concert • LIVE<br>-->
+<!--                        <span class = "wd-text-white" ><b>Welcome to Justin Bieber's Concert!</b> </span><br>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img class = "wd-post-image" src = "images/concert.jpeg"-->
+<!--                                 width = "100px" height = "100px"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+<!--                    <div style="position: absolute">-->
+<!--                        <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>-->
+<!--                        <span class = "wd-text-white"><b> Long Hours, Low Pay, Loneliness and a Booming Industry </b></span>-->
+<!--                    </div>-->
+<!--                    <div class = "wd-padded-right">-->
+<!--                        <img class = "wd-post-image" src = "images/NYTimes.jpeg"-->
+<!--                             width = "100px" height = "100px"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class = "wd-posts wd-inner-padding" style = "height: 120px">-->
+<!--                    <div style="position: absolute">-->
+<!--                        <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>-->
+<!--                        <span class = "wd-text-white"><b>An Energy Crisis Is the Latest Threat to Food Supplies</b></span>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <img class = "wd-post-image" src = "images/BO.jpeg"-->
+<!--                             width = "100px" height = "100px"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+            <div class = "col-4 d-none d-lg-block">
+                <ul class = "list-group">
+                    <li class="list-group-item">
+                        Who to follow
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/java.png" class="wd-avatar-image" alt="java">
+                            </div>
+                            <div class="col-7">
+                                Java <i class="fa fa-check-circle"></i><br>
+                                @Java
+                            </div>
+                            <div class="col-3">
+                                <button class = "btn btn-primary wd-btn-border">
+                                    Follow
+                                </button>
+                            </div>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/relativityspace.jpeg" class="wd-avatar-image" alt="relativity space">
+                            </div>
+                            <div class="col-7">
+                                Relativity Space <i class="fa fa-check-circle"></i><br>
+                                @relativityspace
+                            </div>
+                            <div class="col-3">
+                                <button class = "btn btn-primary wd-btn-border">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/virgingalactic.png" class="wd-avatar-image" alt="virgin galactic">
+                            </div>
+                            <div class="col-7">
+                                Virgin Galactic <i class="fa fa-check-circle"></i><br>
+                                @virgingalactic
+                            </div>
+                            <div class="col-3">
+                                <button class = "btn btn-primary wd-btn-border">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/nasa.png" class="wd-avatar-image" alt="nasa logo">
+                            </div>
+                            <div class="col-7">
+                                NASA <i class="fa fa-check-circle"></i><br>
+                                @NASA
+                            </div>
+                            <div class="col-3">
+                                <button class = "btn btn-primary wd-btn-border">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="images/tesla.png" class="wd-avatar-image" alt="tesla logo">
+                            </div>
+                            <div class="col-7">
+                                Tesla <i class="fa fa-check-circle"></i><br>
+                                @Tesla
+                            </div>
+                            <div class="col-3">
+                                <button class = "btn btn-primary wd-btn-border">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class = "wd-posts wd-inner-padding" style = "height: 120px">
-            <div style="position: absolute">
-                Concert • LIVE<br>
-                <span class = "wd-text-white" ><b>Welcome to Justin Bieber's Concert!</b> </span><br>
-            </div>
-            <div>
-                <img class = "wd-post-image" src = "images/concert.jpeg"
-                         width = "100px" height = "100px"/>
-            </div>
-        </div>
-
-        <div class = "wd-posts wd-inner-padding" style = "height: 120px">
-            <div style="position: absolute">
-                <span class = "wd-text-lg"> The New York Times</span> • Yesterday <br>
-                <span class = "wd-text-white"><b> Long Hours, Low Pay, Loneliness and a Booming Industry </b></span>
-            </div>
-            <div class = "wd-padded-right">
-                <img class = "wd-post-image" src = "images/NYTimes.jpeg"
-                     width = "100px" height = "100px"/>
-            </div>
-        </div>
-
-        <div class = "wd-posts wd-inner-padding" style = "height: 120px">
-            <div style="position: absolute">
-                <span class = "wd-text-lg"> Bloomberg Opinion </span> • Yesterday <br>
-                <span class = "wd-text-white"><b>An Energy Crisis Is the Latest Threat to Food Supplies</b></span>
-            </div>
-            <div>
-                <img class = "wd-post-image" src = "images/BO.jpeg"
-                     width = "100px" height = "100px"/>
-            </div>
-        </div>
-
-
-
     </div>
 
 </body>
