@@ -1,0 +1,127 @@
+.wd-whole-page{
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.wd-bookmarks{
+    color:white;
+    font-size: 20px;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+.wd-handle{
+    color:lightgray;
+    font-size: 13px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+}
+
+.wd-border{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-flex{
+    display: flex;
+}
+
+.wd-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.wd-avatar-padding{
+    padding-top: 12px;
+    padding-left: 16px;
+}
+
+.wd-handle-content{
+    color: lightgray;
+}
+
+.wd-post-name{
+    padding-left: 12px;
+    padding-top: 12px;
+    color: white;
+    font-size: 15px;
+}
+
+.wd-post-content{
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    color: white;
+    font-size: 15px;
+    max-width: 506px;
+}
+
+
+.wd-content-image{
+    color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    max-width: 504px;
+}
+
+.wd-padded-left{
+    padding-left: 12px;
+}
+
+.wd-border-content{
+    color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    max-width: 504px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.wd-below-image-content{
+    font-size: 15px;
+    color: lightgray;
+    width: 504px;
+}
+
+
+.wd-padding{
+    padding-top: 12px;
+    word-spacing: 110px;
+    padding-bottom: 12px;
+}
+
+.wd-icon{
+    color: lightgray;
+    text-decoration:none;
+}
+
+.wd-icon-number{
+    padding-left: 12px;
+    color: lightgray;
+}
+
+.wd-padding-title{
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.wd-padding-around{
+    padding:12px;
+}
+
+.wd-padding-bottom{
+    padding-bottom: 12px;
+}
+
+.wd-fg-color{
+    color: lightgray;
+}
