@@ -51,6 +51,11 @@
     padding-left: 8px;
 }
 
+.nav-tabs .nav-item.active{
+    background-color: black;
+    color:rgb(29,161,242);
+    border-style: none;
+}
 
 .nav-tabs.wd-override-border{
     border-style: none;
@@ -176,4 +181,3 @@
 .wd-no-wrap {
     white-space: nowrap;
 }
-
