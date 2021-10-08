@@ -122,6 +122,10 @@
     float: right;
 }
 
+.wd-padded-top{
+    padding-top: 3px;
+}
+
 .wd-for-you {
     color:rgb(29,161,242);
     font-size: 15px;
