@@ -8,7 +8,7 @@ const PostSummaryItem = (post) =>{
                 <!--<span class="wd-fg-posts">${post.tweets}</span>-->
             </div>
             <div class="col-3">
-                <img src= ${post.image} class="wd-all-rounded-image" alt="reactjs" style="float: right"/>
+                <img src= ${post.image} class="wd-all-rounded-image" style="float: right"/>
             </div>
         </div>
     `)
