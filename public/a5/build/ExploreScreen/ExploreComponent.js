@@ -10,7 +10,7 @@ const ExploreComponent = () => {
                            placeholder="Search Twitter" style="padding-left: 30px;border-radius: 50px">
                 </div>
                 <div class="col-2">
-                    <a href="explore-settings.html">
+                    <a href="../../twitter/explore/explore-settings.html">
                         <i class ="fas fa-cog fa-2x wd-padded-right wd-padded-top"></i>
                     </a>
                 </div>
