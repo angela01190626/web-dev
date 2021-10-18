@@ -56,7 +56,7 @@ const ExploreComponent = () => {
             <ul className="list-group mb-2">
                 <li className = "list-group-item ps-0 pe-0 pt-0 pb-0">
                         <div style={{"position": "relative"}}>
-                            <img src={"../images/starship.jpeg"} width="100%"/>
+                            <img src={"../images/starship.jpeg"} width="100%" alt=""/>
                             <div className="wd-starship">
                                 <b>SpaceX's Starship</b>
                             </div>

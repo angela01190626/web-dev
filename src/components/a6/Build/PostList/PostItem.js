@@ -1,5 +1,4 @@
 import React from "react";
-import bookmark from "./bookmark.json";
 
 const PostItem =({bookmark =
     { avatarIcon: "../images/avatar1.jpeg",
@@ -13,7 +12,7 @@ const PostItem =({bookmark =
     return(
         <div className = "row">
             <div className = "col-1 pt-3" >
-                <img src = {bookmark.avatarIcon} className = "wd-avatar"/>
+                <img src = {bookmark.avatarIcon} className = "wd-avatar" alt=""/>
             </div>
             <div className="col-11">
                 <div className = "wd-post-name">
@@ -28,7 +27,7 @@ const PostItem =({bookmark =
                 <div className = "wd-flex wd-padded-left">
                     
                     <img className = {`${bookmark.link ==='' && bookmark.title === '' && bookmark.content === '' ? 'wd-content-image1' :'wd-content-image'}`}
-                    src = {bookmark.img} height = "300px" width = "700px"/>
+                    src = {bookmark.img} height = "300px" width = "700px" alt=""/>
                 
                 </div>
                 <div className = {`${bookmark.link ==='' && bookmark.title === '' && bookmark.content === '' ? 'none' :'wd-padded-left'}`}>
