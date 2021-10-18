@@ -146,3 +146,7 @@
 .wd-fg-color{
     color: lightgray;
 }
+
+.wd-link{
+    text-decoration: none;
+}

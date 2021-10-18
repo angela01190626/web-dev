@@ -59,7 +59,7 @@ const NavigationSidebar = (active) => {
                                 <i class="fas fa-circle fa-stack-1x"></i>
                                 <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
                                 <span class="d-none d-xl-inline-block" style="padding-left: 31px">
-                                More
+                                    More
                                 </span>
                             </span>
 

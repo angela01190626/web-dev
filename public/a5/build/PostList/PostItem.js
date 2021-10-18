@@ -12,7 +12,8 @@ const PostItem =(bookmark) => {
                     <span class ="wd-handle-content"> @${bookmark.handle} - ${bookmark.time}</span>
                 </div>
                 <div class = "wd-post-content">
-                    ${bookmark.userContent}
+                    ${bookmark.userContent1}<a href ="#" class="wd-link">${bookmark.userhandle}</a>${bookmark.userContent2}
+                    <a href = ${bookmark.userlink} class = "wd-link">${bookmark.userlinkAbbr}</a>
                 </div>
                 
                 <div class = "wd-flex wd-padded-left">
