@@ -1,6 +1,5 @@
 import PostItem from "./PostItem.js";
 import bookmark from "./bookmark.json";
-import PostSummaryItem from "../PostSummaryList/PostSummaryItem";
 import React from "react";
 
 const PostList = () => {

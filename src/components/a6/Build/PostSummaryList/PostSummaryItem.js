@@ -16,7 +16,7 @@ const PostSummaryItem = (
                 <b>{post.title}</b>
             </div>
             <div className="col-3">
-                <img src= {post.image} className="wd-all-rounded-image wd-float-right"/>
+                <img src= {post.image} className="wd-all-rounded-image wd-float-right" alt=""/>
             </div>
         </div>
     )

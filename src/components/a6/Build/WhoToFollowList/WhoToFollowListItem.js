@@ -12,7 +12,7 @@ const WhoToFollowListItem =(
             <li className="list-group-item">
                 <div className="row" style={{"position": "relative"}}>
                     <div className="col-lg-2 col-xl-2 col-xxl-2">
-                        <img src = {who.avatarIcon} className="wd-avatar-image"/>
+                        <img src = {who.avatarIcon} className="wd-avatar-image" alt=""/>
                     </div>
                     <div className="col-lg-6 col-xl-6 col-xxl-7 wd-no-wrap wd-z-index">
                         {who.userName} <i className="fa fa-check-circle"/><br/>
