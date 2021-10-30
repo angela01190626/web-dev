@@ -5,7 +5,6 @@ import Styles from "./Styles";
 import ConditionalOutput from "./ConditionalOutput";
 import TodoList from "./Todo/TodoList";
 import ReduxExamples from "./ReduxExamples/components/index";
-import Todos from "./ReduxExamples/components/Todos";
 
 const Practice = () => {
     return(
