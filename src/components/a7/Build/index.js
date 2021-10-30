@@ -1,10 +1,12 @@
 import React from "react";
+import {Route} from "react-router-dom";
 import NavigationSidebar from "./NavigationSideBar";
 import WhoToFollowList from "./WhoToFollowList";
 import ExploreComponent from "./ExploreScreen/ExploreComponent";
 import who from "../../../reducers/who";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
+import HomeScreen from "../../a7/Build/HomeScreen/HomeScreen";
 
 const store = createStore(who);
 

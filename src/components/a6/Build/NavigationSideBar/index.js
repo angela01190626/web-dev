@@ -8,19 +8,19 @@ const Navigation = (
     return(
         <>
             <div className="list-group">
-                <Link to="/a7"
+                <Link to="/a6"
                       className="list-group-item" href="#">
                     <i className="fab fa-twitter"/>
                 </Link>
 
-                <Link to="/a7/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`} href = "../ExploreScreen/home.html" id = "home">
+                <Link to="/a6/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`} href = "../ExploreScreen/home.html" id = "home">
                     <i className = "fa fa-home">
                             <span className="d-none d-xl-inline-block">
                                 Home
                             </span>
                     </i>
                 </Link>
-                <Link to="/a7/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} href = "../ExploreScreen/explore.html" id = "explore">
+                <Link to="/a6/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} href = "../ExploreScreen/explore.html" id = "explore">
                         <i className = "fa fa-hashtag">
                             <span className ="d-none d-xl-inline-block">
                                 Explore

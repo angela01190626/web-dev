@@ -31,9 +31,9 @@ function App() {
               <Route path={["/", "/a7", "/a7/practice"]} exact={true}>
                   <Practice/>
               </Route>
-              <Route path="/a7/twitter">
-                  <Build/>
-              </Route>
+              {/*<Route path="/a7/twitter">*/}
+              {/*    <Build/>*/}
+              {/*</Route>*/}
 
           </div>
       </BrowserRouter>
