@@ -121,12 +121,14 @@
 
 .wd-icon{
     color: lightgray;
+    padding-right: 12px;
     text-decoration:none;
 }
 
 .wd-icon-number{
-    padding-left: 12px;
+    padding-right: 90px;
     color: lightgray;
+    text-decoration:none;
 }
 
 .wd-padding-title{
