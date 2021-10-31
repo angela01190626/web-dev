@@ -9,7 +9,7 @@ import HelloWorld from "./components/a6/HelloWorld";
 import Practice from "./components/a7/Practice/index";
 import Build from "./components/a6/Build/index";
 import HomeScreen from "./components/a6/Build/HomeScreen/HomeScreen";
-import ExploreScreen from "./components/a7/Build/ExploreScreen/ExploreScreen";
+// import ExploreScreen from "./components/a7/Build/ExploreScreen/ExploreScreen";
 import {BrowserRouter, Route} from "react-router-dom";
 import who from "./reducers/who";
 import tweets from "./reducers/tweets";
@@ -19,8 +19,7 @@ import {combineReducers, createStore} from "redux";
 function App() {
 
     const reducer = combineReducers({tweets: tweets, who})
-    const store = createStore(reducer);
-
+    // const store = createStore(reducer);
         return (
           <BrowserRouter>
               <div className="container-fluid">
