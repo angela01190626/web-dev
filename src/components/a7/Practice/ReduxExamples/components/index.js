@@ -14,8 +14,8 @@ const ReduxExamples = () => {
         <Provider store={store}>
             <div>
                 <h2>Redux Examples</h2>
-                <HelloReduxExampleComponent/>
                 <Todos/>
+                <HelloReduxExampleComponent/>
             </div>
         </Provider>
     );
