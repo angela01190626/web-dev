@@ -14,7 +14,7 @@ const TweetListItem = ({tweet}) => {
                 <tr>
                     <td className="align-text-top">
                         <img className="wd-avatar"
-                             src={tweet['logo-image']}/>
+                             src={tweet['logo-image']} alt=""/>
                     </td>
                     <td className="ps-3" style={{width: '100%'}}>
                         <i onClick={deleteTweetClickHandler} className="fas fa-times fa-pull-right"/>
@@ -28,7 +28,7 @@ const TweetListItem = ({tweet}) => {
                             tweet.attachments && tweet.attachments.image &&
                             <img src={tweet.attachments.image}
                                  className="mt-2 wd-border-radius-20px"
-                                 style={{width: "100%"}}/>
+                                 style={{width: "100%"}} alt=""/>
                         }
                         {
                             tweet.attachments && tweet.attachments.video &&
