@@ -13,14 +13,14 @@ const Navigation = (
                     <i className="fab fa-twitter"/>
                 </Link>
 
-                <Link to="/a7/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`} href = "../ExploreScreen/home.html" id = "home">
+                <Link to="/a7/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}  id = "home">
                     <i className = "fa fa-home">
                             <span className="d-none d-xl-inline-block">
                                 Home
                             </span>
                     </i>
                 </Link>
-                <Link to="/a7/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} href = "../ExploreScreen/explore.html" id = "explore">
+                <Link to="/a7/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} id = "explore">
                         <i className = "fa fa-hashtag">
                             <span className ="d-none d-xl-inline-block">
                                 Explore
@@ -56,13 +56,13 @@ const Navigation = (
                             </span>
                         </i>
                     </a>
-                    <a className = {`list-group-item ${active === 'profile' ? 'active' : ''}`} href = "../../twitter/profile.html" id = 'profile'>
+                    <Link to="/a7/twitter/profile" className = {`list-group-item ${active === 'profile' ? 'active' : ''}`} id = 'profile'>
                         <i className = "fa fa-user">
                             <span className="d-none d-xl-inline-block">
                                 Profile
                             </span>
                         </i>
-                    </a>
+                    </Link>
                     <a className = {`list-group-item ps-1 ${active === 'more' ? 'active' : ''}`} href = "../../twitter/more.html" id = 'more'>
                         <span className="fa-stack fa-1x pe-0" >
                             <i className="fas fa-circle fa-stack-1x"/>

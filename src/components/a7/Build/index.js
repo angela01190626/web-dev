@@ -1,42 +1,30 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import NavigationSidebar from "./NavigationSideBar";
-import WhoToFollowList from "./WhoToFollowList";
-import ExploreComponent from "./ExploreScreen/ExploreComponent";
+import tweets from "../../../reducers/tweets";
 import who from "../../../reducers/who";
-import {createStore} from "redux";
+import profile from "../../../reducers/profile";
+import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
-import HomeScreen from "../../a7/Build/HomeScreen/HomeScreen";
-import PostSummaryList from "./PostSummaryList";
+import {Route} from "react-router-dom";
+import HomeScreen from "./HomeScreen/HomeScreen";
+import ExploreScreen from "./ExploreScreen/ExploreScreen";
+import ProfileScreen from "./ProfileScreen";
+import EditProfile from "./ProfileScreen/EditProfile";
 
-const store = createStore(who);
+const reducer = combineReducers({tweets: tweets, who, profile});
+const store = createStore(reducer);
 
 const Build = () => {
     return(
         <Provider store={store}>
-            <div className="row mt-2">
-                <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                    <NavigationSidebar active="explore"/>
-                </div>
-                <div className="col-10 col-lg-8 col-xl-7 col-xxl-6"
-                     style={{"position": "relative"}}>
-                    <ExploreComponent/>
-                </div>
-                <div className="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-4">
-                    <PostSummaryList title="What's happening"/>
-                </div>
+            <div>
+                <Route path={["/", "/a7/twitter/home"]} exact={true} component={HomeScreen}/>
+                <Route path="/a7/twitter/explore" exact={true} component={ExploreScreen}/>
+                <Route path="/a7/twitter/profile" exact={true} component={ProfileScreen}/>
+                <Route path="/a7/twitter/editProfile" exact={true} component={EditProfile}/>
             </div>
-
-            {/*<div>*/}
-            {/*    <Route path={[`${match.url}/`, `${match.url}/home`]} exact={true} component={HomeScreen}/>*/}
-            {/*    <Route path={`${match.url}/explore`} exact={true} component={ExploreScreen}/>*/}
-            {/*    /!*<Route path="/a7/twitter/explore"*!/*/}
-            {/*    /!*       exact={true} component={ExploreScreen}/>*!/*/}
-            {/*</div>*/}
         </Provider>
     );
 };
-
 export default Build;
 
 

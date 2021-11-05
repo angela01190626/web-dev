@@ -10,7 +10,7 @@ const Practice = () => {
     return(
         <>
             <h1>Practice</h1>
-            <Link to="/a7/home">
+            <Link to="/a7/twitter/home">
                 Build A7
             </Link>
             <ReduxExamples/>

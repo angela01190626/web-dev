@@ -1,8 +1,11 @@
-import whoJson from '../data/who.json';
+import whoJson from './data/who.json';
 
-const who = (state = whoJson) => {
+const initialState = {
+    who: whoJson
+}
+
+const who = (state = initialState) => {
     return(state);
 };
 
 export default who;
-

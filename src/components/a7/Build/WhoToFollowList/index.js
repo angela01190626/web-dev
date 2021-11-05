@@ -1,15 +1,15 @@
 import React from "react";
 import WhoToFollowListItem from "./WhoToFollowListItem";
-// import who from "../../../../data/who.json";
-import {Provider, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
+
+const selectAllWho = (state) => state.who.who;
 
 const WhoToFollowList = () => {
-    const who = useSelector((state) => who.state);
+    const who = useSelector(selectAllWho);
     return (
-        <Provider store={who}>
             <ul className="list-group">
                 <li className="list-group-item">
-                        Who to follow
+                    Who to follow
                 </li>
                 {
                     who.map(who => {
@@ -19,7 +19,6 @@ const WhoToFollowList = () => {
                     })
                 }    
             </ul>
-        </Provider>
     );
 }
 export default WhoToFollowList;

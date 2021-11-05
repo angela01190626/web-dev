@@ -1,23 +1,23 @@
 import React from "react";
 import './tweet.css';
-//import TweetStats from "./TweetStats";
+import TweetStats from "./TweetStats";
 import {useDispatch} from "react-redux";
 
 const TweetListItem = ({tweet}) => {
-    // const dispatch = useDispatch();
-    // const deleteTweetClickHandler = () => {
-    //     dispatch({type: 'delete-tweet', tweet})
-    // }
+    const dispatch = useDispatch();
+    const deleteTweetClickHandler = () => {
+        dispatch({type: 'delete-tweet', tweet})
+    }
     return(
         <li className="list-group-item">
             <table>
                 <tr>
                     <td className="align-text-top">
-                        <img className="rounded-circle wd-avatar-image"
+                        <img className="wd-avatar"
                              src={tweet['logo-image']}/>
                     </td>
                     <td className="ps-3" style={{width: '100%'}}>
-                        <i onClick={deleteTweetClickHandler} className="fa fa-remove fa-pull-right"/>
+                        <i onClick={deleteTweetClickHandler} className="fas fa-times fa-pull-right"/>
                         <span className="fw-bold">{tweet.userName}</span>
                         {tweet.verified && <i className="ms-1 fas fa-badge-check"/>}
                         <span className="ms-1 text-secondary">@{tweet.handle}</span>
@@ -41,7 +41,7 @@ const TweetListItem = ({tweet}) => {
                             allowFullScreen/>
                         }
                         {/*{JSON.stringify(tweet)}*/}
-                        {/*<TweetStats tweet={tweet}/>*/}
+                        <TweetStats tweet={tweet}/>
                     </td>
                 </tr>
             </table>

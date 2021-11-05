@@ -1,18 +1,22 @@
 import React from "react";
 import NavigationSidebar from "../NavigationSideBar";
-import PostSummaryList from "../PostSummaryList";
-import WhatsHappening from "../WhatsHappening";
+import ProfileItem from "./ProfileItem";
+import {useSelector} from "react-redux";
 import TweetList from "../TweetList";
+import PostSummaryList from "../PostSummaryList";
 
+const selectProfile = (state) => state.profile.profile;
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
+    const profile = useSelector(selectProfile);
+
     return(
         <div className="row mt-2">
-            <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                <NavigationSidebar active= 'home'/>
+            <div className="col-2">
+                <NavigationSidebar active= 'profile'/>
             </div>
             <div className="mb-2 col-10 col-lg-8 col-xl-7 col-xxl-6">
-                <WhatsHappening/>
+                <ProfileItem profile={profile}/>
                 <TweetList/>
             </div>
             <div className="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-4">
@@ -22,4 +26,4 @@ const HomeScreen = () => {
     );
 };
 
-export default HomeScreen;
+export default ProfileScreen;

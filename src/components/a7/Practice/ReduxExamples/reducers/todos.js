@@ -11,6 +11,7 @@ const data = [
     },
 ];
 
+// implements a FSM (Finite State Machine)
 const todos = (state = data, action) => {
     switch (action.type) {
         case 'update-todo':

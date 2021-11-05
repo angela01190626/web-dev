@@ -1,9 +1,8 @@
 import React from "react";
-// import tweets from "../../../../data/tweets.json";
 import {useSelector} from "react-redux";
 import TweetListItem from "./TweetListItem";
 
-const selectAllTweets = (state) => state.tweets;
+const selectAllTweets = (state) => state.tweets.tweets;
 
 const TweetList = () => {
 
