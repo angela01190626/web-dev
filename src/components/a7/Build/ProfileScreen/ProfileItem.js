@@ -17,7 +17,7 @@ const ProfileItem = (
             {/*{JSON.stringify(profile)}*/}
             <div className="row pt-2">
                 <div className="col-1">
-                    <a href="#"><i className="fas fa-long-arrow-alt-left"/></a>
+                    <a href="/#"><i className="fas fa-long-arrow-alt-left"/></a>
                 </div>
                 <div className="col-11">
                     <h6>{profile.name}</h6>
