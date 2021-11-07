@@ -1,4 +1,6 @@
-.wd-fg-posts{color: rgb(110, 118, 125);}
+.wd-fg-posts{
+    color: rgb(110, 118, 125);
+}
 
 .wd-all-rounded-image{
     border-style: none;
@@ -125,7 +127,7 @@
 }
 
 .wd-icon-number{
-    padding-left: 12px;
+    padding-left: 20px;
     color: lightgray;
 }
 

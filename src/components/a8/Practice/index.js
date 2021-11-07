@@ -23,7 +23,7 @@ const Practice = () => {
             <Link to="/a6/hello">
                 Hello A6
             </Link> |
-            <Link to="/a6/twitter">
+            <Link to="/a6/twitter/explore">
                 Build A6
             </Link>
             <TodoList/>

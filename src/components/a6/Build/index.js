@@ -1,8 +1,7 @@
 import React from "react";
-import NavigationSidebar from "./NavigationSideBar";
-import WhoToFollowList from "./WhoToFollowList";
-import ExploreComponent from "./ExploreScreen/ExploreComponent";
-import {Link} from "react-router-dom";
+import {Route,Link} from "react-router-dom";
+import HomeScreen from "./HomeScreen/HomeScreen";
+import ExploreScreen from "./ExploreScreen/ExploreScreen";
 
 const BuildA6 = () => {
     return(
@@ -13,17 +12,10 @@ const BuildA6 = () => {
             <Link to="/">
                 Practice
             </Link>
-            <div className="row mt-2">
-                <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                    <NavigationSidebar active="explore"/>
-                </div>
-                <div className="col-10 col-lg-8 col-xl-7 col-xxl-6"
-                     style={{"position": "relative"}}>
-                    <ExploreComponent/>
-                </div>
-                <div className="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-4">
-                    <WhoToFollowList/>
-                </div>
+            <div>
+                <Route path={["/", "/a6/twitter/home"]} exact={true} component={HomeScreen}/>
+                <Route path="/a6/twitter/explore" exact={true} component={ExploreScreen}/>
+
             </div>
         </>
     )
