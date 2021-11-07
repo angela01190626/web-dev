@@ -2,15 +2,16 @@ import React from "react";
 import NavigationSidebar from "./NavigationSideBar";
 import WhoToFollowList from "./WhoToFollowList";
 import ExploreComponent from "./ExploreScreen/ExploreComponent";
-import {Link} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
+import HomeScreen from "../../a6/Build/HomeScreen/HomeScreen";
 
-const Build = () => {
+const BuildA6 = () => {
     return(
         <>
             <Link to="/a6/hello">
                 Hello
             </Link> |
-            <Link to="/a6/practice">
+            <Link to="/">
                 Practice
             </Link>
             <div className="row mt-2">
@@ -29,6 +30,6 @@ const Build = () => {
     )
 };
 
-export default Build;
+export default BuildA6;
 
 

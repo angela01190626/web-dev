@@ -9,22 +9,24 @@ import HomeScreen from "./HomeScreen/HomeScreen";
 import ExploreScreen from "./ExploreScreen/ExploreScreen";
 import ProfileScreen from "./ProfileScreen";
 import EditProfile from "./ProfileScreen/EditProfile";
+import HomeScreenA6 from "../../a6/Build/HomeScreen/HomeScreen";
 
 const reducer = combineReducers({tweets: tweets, who, profile});
 const store = createStore(reducer);
 
-const BuildA7 = () => {
+const Build = () => {
     return(
         <Provider store={store}>
             <div>
-                <Route path={["/", "/a7/twitter/home"]} exact={true} component={HomeScreen}/>
+                <Route path={["/", "/a8/twitter/home"]} exact={true} component={HomeScreen}/>
                 <Route path="/a7/twitter/explore" exact={true} component={ExploreScreen}/>
                 <Route path="/a7/twitter/profile" exact={true} component={ProfileScreen}/>
                 <Route path="/a7/twitter/editProfile" exact={true} component={EditProfile}/>
+                <Route path="/a6/twitter/home" exact={true} component={HomeScreenA6}/>
             </div>
         </Provider>
     );
 };
-export default BuildA7;
+export default Build;
 
 
