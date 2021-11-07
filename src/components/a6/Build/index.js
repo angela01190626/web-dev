@@ -2,8 +2,7 @@ import React from "react";
 import NavigationSidebar from "./NavigationSideBar";
 import WhoToFollowList from "./WhoToFollowList";
 import ExploreComponent from "./ExploreScreen/ExploreComponent";
-import {Link, Route} from "react-router-dom";
-import HomeScreen from "../../a6/Build/HomeScreen/HomeScreen";
+import {Link} from "react-router-dom";
 
 const BuildA6 = () => {
     return(
