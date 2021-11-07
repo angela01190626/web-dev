@@ -9,7 +9,6 @@ import HomeScreen from "./HomeScreen/HomeScreen";
 import ExploreScreen from "./ExploreScreen/ExploreScreen";
 import ProfileScreen from "./ProfileScreen";
 import EditProfile from "./ProfileScreen/EditProfile";
-import HomeScreenA6 from "../../a6/Build/HomeScreen/HomeScreen";
 
 const reducer = combineReducers({tweets: tweets, who, profile});
 const store = createStore(reducer);
