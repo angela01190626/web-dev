@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+
 const selectProfile = (state) => state.profile.profile;
 
 const EditProfile = () =>{
@@ -39,10 +40,12 @@ const EditProfile = () =>{
             </div>
             <div style={{"position": "relative",paddingBottom:'320px'}} className="mt-2">
                 <img src={profile.bannerPicture} className="wd-banner-image" alt=""/>
+                <i className="fas fa-camera wd-banner-upload-pos"/>
+                <i className="fas fa-times wd-banner-cancel-pos"/>
                 <img src={profile.profilePicture} className="wd-profile-image" alt=""/>
                 <i className="fas fa-camera wd-avatar-pos"/>
             </div>
-            <div>
+            <div className="p-2">
                 <table className="wd-table">
                     <th style={{
                         paddingLeft: "15px"}}>
@@ -123,15 +126,23 @@ const EditProfile = () =>{
                     </tr>
                     </tbody>
                 </table>
-                <form>
-                    <label>
-                        Birth date<br/>
-                        <input type="date"
+                <table className="wd-table">
+                    <th style={{
+                        paddingLeft: "15px"}}>
+                        <tr>
+                            Birth date
+                        </tr>
+                    </th>
+                    <tbody>
+                    <tr>
+                        <input className="wd-input-date"
+                               type="date"
                                value={newProfile.dateOfBirth}
                                onChange={(event) => handleChangeValue('dateOfBirth',event.target.value)}
                         />
-                    </label>
-                </form>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </>
     )

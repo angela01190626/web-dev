@@ -6,9 +6,13 @@ const initialState = {
 
 const profile = (state = initialState, action) => {
     switch (action.type) {
+        case 'fetch-profile':
+            return({
+                profile: action.profile
+            })
         case 'edit-profile':
-            console.log('edit-profile')
-            console.log(action.profile)
+            // console.log('edit-profile')
+            // console.log(action.profile)
             return {
                 ...state,
                 profile: action.profile

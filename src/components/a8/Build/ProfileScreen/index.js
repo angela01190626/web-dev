@@ -4,11 +4,14 @@ import ProfileItem from "./ProfileItem";
 import {useSelector} from "react-redux";
 import TweetList from "../TweetList";
 import PostSummaryList from "../PostSummaryList";
+// import {fetchProfile} from "../../../../services/profileService";
 
 const selectProfile = (state) => state.profile.profile;
 
 const ProfileScreen = () => {
     const profile = useSelector(selectProfile);
+    // const dispatch = useDispatch();
+    // useEffect(() =>fetchProfile(dispatch),[])
 
     return(
         <div className="row mt-2">
