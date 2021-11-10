@@ -26,7 +26,7 @@ const EditProfile = () =>{
         <>
             <div className="row pt-2">
                 <div className="col-1">
-                    <Link to = "/a7/twitter/profile" onClick={cancelClickHandler}><i className="fas fa-times"/></Link>
+                    <Link to = "/a7/twitter/profile" onClick={cancelClickHandler}><i className="fas fa-times wd-icon-color"/></Link>
                 </div>
                 <div className="col-9">
                     <h5>Edit Profile</h5>
@@ -40,10 +40,10 @@ const EditProfile = () =>{
             </div>
             <div style={{"position": "relative",paddingBottom:'320px'}} className="mt-2">
                 <img src={profile.bannerPicture} className="wd-banner-image" alt=""/>
-                <i className="fas fa-camera wd-banner-upload-pos"/>
-                <i className="fas fa-times wd-banner-cancel-pos"/>
+                <a href="#"><i className="fas fa-camera wd-banner-upload-pos"/></a>
+                <a href="#"><i className="fas fa-times wd-banner-cancel-pos"/></a>
                 <img src={profile.profilePicture} className="wd-profile-image" alt=""/>
-                <i className="fas fa-camera wd-avatar-pos"/>
+                <a href="#"><i className="fas fa-camera wd-avatar-pos"/></a>
             </div>
             <div className="p-2">
                 <table className="wd-table">

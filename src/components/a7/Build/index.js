@@ -8,7 +8,7 @@ import {Route} from "react-router-dom";
 import HomeScreen from "./HomeScreen/HomeScreen";
 import ExploreScreen from "./ExploreScreen/ExploreScreen";
 import ProfileScreen from "./ProfileScreen";
-import EditProfile from "./ProfileScreen/EditProfile";
+import EditProfileScreen from "./ProfileScreen/EditProfileScreen";
 
 const reducer = combineReducers({tweets: tweets, who, profile});
 const store = createStore(reducer);
@@ -20,7 +20,7 @@ const BuildA7 = () => {
                 <Route path={["/", "/a7/twitter/home"]} exact={true} component={HomeScreen}/>
                 <Route path="/a7/twitter/explore" exact={true} component={ExploreScreen}/>
                 <Route path="/a7/twitter/profile" exact={true} component={ProfileScreen}/>
-                <Route path="/a7/twitter/editProfile" exact={true} component={EditProfile}/>
+                <Route path="/a7/twitter/editProfile" exact={true} component={EditProfileScreen}/>
             </div>
         </Provider>
     );

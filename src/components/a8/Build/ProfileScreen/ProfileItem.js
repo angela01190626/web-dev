@@ -26,7 +26,7 @@ const ProfileItem = (
                 <div style={{"position": "relative",paddingBottom:'320px'}}>
                     <img src={profile.bannerPicture} className="wd-banner-image" alt=""/>
                     <img src={profile.profilePicture} className="wd-profile-image" alt=""/>
-                    <Link to ="/a7/twitter/editProfile"
+                    <Link to ="/a8/twitter/editProfile"
                           className="btn btn-primary wd-edit-button">
                         Edit profile
                     </Link>
