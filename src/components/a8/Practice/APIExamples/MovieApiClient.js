@@ -14,7 +14,7 @@ const MovieApiClient = () => {
             .then(response => response.json())
             .then(movies => setMovies(movies));
 
-    const [movie, setMovie] = useState({id: (new Date()).getTime() + '',title: '', rating: 2.5});
+    const [movie, setMovie] = useState({_id: (new Date()).getTime() + '',title: '', rating: 2.5});
     const onMovieTitleChange = (event) =>
         setMovie({...movie, title: event.target.value});
     const createMovieClickHandler = () =>
@@ -43,6 +43,7 @@ const MovieApiClient = () => {
     return(
         <div>
             <h2>Movies</h2>
+            <h3>{JSON.stringify(movies)}</h3>
             <ul className="list-group">
                 {
                     movies.map((movie) =>
