@@ -25,7 +25,7 @@ const todos = (state = data, action) => {
         case 'create-todo':
             const newTodo = {
                 ...action.todo,
-                _id: (new Date()).getDate() + ""
+                _id: (new Date()).getTime() + ""
             };
             return [
                 ...state,

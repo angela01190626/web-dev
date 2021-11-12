@@ -4,13 +4,12 @@ import {useDispatch,useSelector} from "react-redux";
 const Todos = () => {
     const todos = useSelector(state => state.todos);
     const [todo, setTodo] = useState({do: '', done: false});
-    const todoChangeHandler = (event) => {
-        const doValue = event.target.value;
-        const newTodo = {
-            do: doValue
-        };
-        setTodo(newTodo);
-    }
+    // const todoChangeHandler = (key,value)=>{
+    //     setTodo({
+    //         ...todo,
+    //         [key]:value
+    //     })
+    // }
     const dispatch = useDispatch();
     const createTodoClickHandler = () => {
         const action = {
@@ -50,7 +49,10 @@ const Todos = () => {
                                    type="checkbox"/>
                             {todo.do}
                             <input
-                                onChange={todoChangeHandler}
+                                onChange={(event) =>
+                                    updateTodoClickHandler(
+                                        {...todo,
+                                            do: event.target.value})}
                                 value={todo.do}
                                 className="form-control"/>
                             <button onClick={createTodoClickHandler}
@@ -62,7 +64,7 @@ const Todos = () => {
                                     className="btn btn-danger float-end">
                                 Delete
                             </button>
-                            {/*<h5>{JSON.stringify(todos)}</h5>*/}
+                            <h5>{JSON.stringify(todos)}</h5>
                         </li>
 
                     )
