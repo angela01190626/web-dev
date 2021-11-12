@@ -64,7 +64,7 @@ const Todos = () => {
                                     className="btn btn-danger float-end">
                                 Delete
                             </button>
-                            <h5>{JSON.stringify(todos)}</h5>
+                            {/*<h5>{JSON.stringify(todos)}</h5>*/}
                         </li>
 
                     )
