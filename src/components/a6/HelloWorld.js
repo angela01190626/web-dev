@@ -8,7 +8,7 @@ const HelloWorld = () => {
             <Link to="/">
                 Practice
             </Link> |
-            <Link to="/a6/build">
+            <Link to="/a6/twitter/explore">
                 Build
             </Link>
         </>
