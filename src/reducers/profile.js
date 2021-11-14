@@ -7,9 +7,10 @@ const initialState = {
 const profile = (state = initialState, action) => {
     switch (action.type) {
         case 'fetch-profile':
-            return({
+            return {
+                ...state,
                 profile: action.profile
-            })
+            }
         case 'edit-profile':
             // console.log('edit-profile')
             // console.log(action.profile)
@@ -18,9 +19,9 @@ const profile = (state = initialState, action) => {
                 profile: action.profile
             }
         case 'cancel-edit':
-            return (state);
+            return state;
         default:
-            return (state);
+            return state;
     }
 };
 

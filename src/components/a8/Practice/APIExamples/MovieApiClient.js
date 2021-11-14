@@ -42,7 +42,7 @@ const MovieApiClient = () => {
 
     return(
         <div>
-            <h2>{JSON.stringify(movies)}</h2>
+            {/*<h2>{JSON.stringify(movies)}</h2>*/}
             <h2>Movies</h2>
             <ul className="list-group">
                 {

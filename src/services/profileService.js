@@ -11,8 +11,12 @@ export const fetchProfile = (dispatch) =>
         );
 
 export const editProfile = (dispatch, profile) =>
-    fetch(`${PROFILE_API}`, {
-        method: 'PUT'
+    fetch(PROFILE_API, {
+        method: 'PUT',
+        body: JSON.stringify(profile),
+        headers: {
+            'content-type': 'application/json'
+        }
     })
         .then(response =>
             dispatch({

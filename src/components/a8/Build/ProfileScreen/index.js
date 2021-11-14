@@ -1,20 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import NavigationSidebar from "../NavigationSideBar";
 import ProfileItem from "./ProfileItem";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import TweetList from "../TweetList";
 import PostSummaryList from "../PostSummaryList";
-// import {fetchProfile} from "../../../../services/profileService";
+import {fetchProfile} from "../../../../services/profileService";
 
 const selectProfile = (state) => state.profile.profile;
 
 const ProfileScreen = () => {
     const profile = useSelector(selectProfile);
-    // const dispatch = useDispatch();
-    // useEffect(() =>fetchProfile(dispatch),[])
+    const dispatch = useDispatch();
+    useEffect(() =>fetchProfile(dispatch),[])
 
     return(
         <div className="row mt-2">
+            {/*{JSON.stringify(profile)}*/}
             <div className="col-2">
                 <NavigationSidebar active= 'profile'/>
             </div>

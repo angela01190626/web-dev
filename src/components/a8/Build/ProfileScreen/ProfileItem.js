@@ -1,21 +1,12 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchProfile} from "../../../../services/profileService";
+// import {useDispatch} from "react-redux";
+// import {fetchProfile} from "../../../../services/profileService";
 
-const ProfileItem = (
-    {profile =
-        {
-            name: 'Yangjiawen Xu',	handle: 'Catherina',
-            profilePicture: '/images/selfie.jpg', bannerPicture: '/images/nature1.jpeg',
-            bio: 'I am a MCSC student at the Boston campus.',
-            location: 'Boston, MA',	dateOfBirth: '10/26/1995',	dateJoined: '9/2021',
-            followingCount: '100',followersCount: '10'
-        }
-    }) => {
+const ProfileItem = ({profile}) => {
 
-    const dispatch = useDispatch();
-    useEffect(() => fetchProfile(dispatch), []);
+    // const dispatch = useDispatch();
+    // useEffect(() => fetchProfile(dispatch), []);
 
     return(
         <>

@@ -1,17 +1,18 @@
 import React, {useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+import {editProfile} from "../../../../services/profileService";
 
-const selectProfile = (state) => state.profile.profile;
+//const selectProfile = (state) => state.profile.profile;
 
-const EditProfile = () =>{
-    const profile = useSelector(selectProfile);
+const EditProfile = ({profile}) =>{
 
-    let [newProfile, setNewProfile] = useState({...profile});
+    const [newProfile, setNewProfile] = useState({...profile});
     const dispatch = useDispatch();
     const saveClickHandler = () => {
+        console.log(profile)
         // console.log(newProfile)
-        dispatch({type: 'edit-profile',profile: newProfile});
+        editProfile(dispatch,newProfile);
     };
     const cancelClickHandler = () => {
         setNewProfile({...profile})
@@ -47,32 +48,38 @@ const EditProfile = () =>{
             </div>
             <div className="p-2">
                 <table className="wd-table">
-                    <th style={{
-                        paddingLeft: "15px"}}>
+                    <thead>
                         <tr>
-                            Name
+                            <th style={{
+                                paddingLeft: "15px"}}>
+                                Name
+                            </th>
                         </tr>
-                    </th>
+                    </thead>
                     <tbody>
-                    <tr>
-                            <textarea
-                                value={newProfile.name}
-                                className="form-control"
-                                onChange={(event) => handleChangeValue('name',event.target.value)}
-                                style={{
-                                    width: "100%", color: "white",
-                                    backgroundColor: "black"
-                                }}/>
-                    </tr>
+                        <tr>
+                            <td>
+                                <textarea
+                                    value={newProfile.name}
+                                    className="form-control"
+                                    onChange={(event) => handleChangeValue('name',event.target.value)}
+                                    style={{
+                                        width: "100%", color: "white",
+                                        backgroundColor: "black"
+                                    }}/>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <table className="wd-table">
-                    <th style={{
-                        paddingLeft: "15px"}}>
-                        <tr>
-                            Bio
+                    <thead>
+                    <tr>
+                        <th style={{
+                            paddingLeft: "15px"}}>
+                                Bio
+                            </th>
                         </tr>
-                    </th>
+                    </thead>
                     <tbody>
                     <tr>
                             <textarea
@@ -87,12 +94,14 @@ const EditProfile = () =>{
                     </tbody>
                 </table>
                 <table className="wd-table">
-                    <th style={{
-                        paddingLeft: "15px"}}>
-                        <tr>
+                    <thead>
+                    <tr>
+                        <th style={{
+                            paddingLeft: "15px"}}>
                             Location
-                        </tr>
-                    </th>
+                        </th>
+                    </tr>
+                    </thead>
                     <tbody>
                     <tr>
                             <textarea
@@ -107,14 +116,17 @@ const EditProfile = () =>{
                     </tbody>
                 </table>
                 <table className="wd-table">
-                    <th style={{
-                        paddingLeft: "15px"}}>
-                        <tr>
+                    <thead>
+                    <tr>
+                        <th style={{
+                            paddingLeft: "15px"}}>
                             Website
-                        </tr>
-                    </th>
+                        </th>
+                    </tr>
+                    </thead>
                     <tbody>
                     <tr>
+                        <td>
                             <textarea
                                 value={newProfile.website}
                                 className="form-control"
@@ -123,16 +135,19 @@ const EditProfile = () =>{
                                     width: "100%", color: "white",
                                     backgroundColor: "black"
                                 }}/>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
                 <table className="wd-table">
-                    <th style={{
-                        paddingLeft: "15px"}}>
-                        <tr>
+                    <thead>
+                    <tr>
+                        <th style={{
+                            paddingLeft: "15px"}}>
                             Birth date
-                        </tr>
-                    </th>
+                        </th>
+                    </tr>
+                    </thead>
                     <tbody>
                     <tr>
                         <input className="wd-input-date"
