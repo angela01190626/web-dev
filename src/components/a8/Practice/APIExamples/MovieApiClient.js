@@ -7,14 +7,15 @@ const MovieApiClient = () => {
                 .then(response => response.json())
                 .then(movies => setMovies(movies))
         , []);
+
     const deleteMovie = (movie) =>
         fetch(`http://localhost:4000/api/movies/${movie._id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
         })
-            .then(response => response.json())
-            .then(movies => setMovies(movies));
+            .then(() => setMovies(
+                movies.filter(m => m !== movie)));
 
-    const [movie, setMovie] = useState({_id: (new Date()).getTime() + '',title: '', rating: 2.5});
+    const [movie, setMovie] = useState({_id:(new Date()).getTime() + '', rating: 2.5});
     const onMovieTitleChange = (event) =>
         setMovie({...movie, title: event.target.value});
     const createMovieClickHandler = () =>
@@ -39,24 +40,19 @@ const MovieApiClient = () => {
             .then(response => response.json())
             .then(movies => setMovies(movies));
 
-
     return(
         <div>
+            <h2>{JSON.stringify(movies)}</h2>
             <h2>Movies</h2>
-            <h3>{JSON.stringify(movies)}</h3>
             <ul className="list-group">
                 {
-                    movies.map((movie) =>
+                    movies.map(movie =>
                         <li className="list-group-item"
                             key={movie._id}>
                             {movie.title} {movie.rating}
                             <button onClick={() => setMovie(movie)}
                                     className="btn btn-primary float-end ms-2">
                                 Edit
-                            </button>
-                            <button onClick={() => deleteMovie(movie)}
-                                    className="btn btn-danger float-end">
-                                Delete
                             </button>
                             <button
                                 onClick={createMovieClickHandler}
@@ -67,12 +63,15 @@ const MovieApiClient = () => {
                                    value={movie.title}
                                    onChange={onMovieTitleChange}
                                    style={{width: "70%"}}/>
+                            <button onClick={() => deleteMovie(movie)}
+                                    className="btn btn-danger float-end">
+                                Delete
+                            </button>
                             <button
                                 onClick={saveMovie}
                                 className="btn btn-primary ms-2 float-end">
                                 Save
                             </button>
-
                         </li>
                     )
                 }
@@ -80,4 +79,5 @@ const MovieApiClient = () => {
         </div>
     )
 };
+
 export default MovieApiClient;

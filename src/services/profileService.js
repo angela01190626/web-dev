@@ -9,3 +9,13 @@ export const fetchProfile = (dispatch) =>
                 profile
             })
         );
+
+export const editProfile = (dispatch, profile) =>
+    fetch(`${PROFILE_API}`, {
+        method: 'PUT'
+    })
+        .then(response =>
+            dispatch({
+                type: 'edit-profile',
+                profile
+            }));

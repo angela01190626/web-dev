@@ -10,7 +10,7 @@ const EditProfile = () =>{
     let [newProfile, setNewProfile] = useState({...profile});
     const dispatch = useDispatch();
     const saveClickHandler = () => {
-        console.log(newProfile)
+        // console.log(newProfile)
         dispatch({type: 'edit-profile',profile: newProfile});
     };
     const cancelClickHandler = () => {
