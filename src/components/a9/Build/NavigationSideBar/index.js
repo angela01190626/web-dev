@@ -8,19 +8,19 @@ const Navigation = (
     return(
         <>
             <div className="list-group">
-                <Link to="/a7"
+                <Link to="/a9"
                       className="list-group-item" href="#">
                     <i className="fab fa-twitter"/>
                 </Link>
 
-                <Link to="/a8/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}  id = "home">
+                <Link to="/a9/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}  id = "home">
                     <i className = "fa fa-home">
                             <span className="d-none d-xl-inline-block">
                                 Home
                             </span>
                     </i>
                 </Link>
-                <Link to="/a8/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} id = "explore">
+                <Link to="/a9/twitter/explore" className= {`list-group-item ${active === 'explore' ? 'active' : ''}`} id = "explore">
                         <i className = "fa fa-hashtag">
                             <span className ="d-none d-xl-inline-block">
                                 Explore
@@ -56,7 +56,7 @@ const Navigation = (
                             </span>
                         </i>
                     </a>
-                    <Link to="/a8/twitter/profile" className = {`list-group-item ${active === 'profile' ? 'active' : ''}`} id = 'profile'>
+                    <Link to="/a9/twitter/profile" className = {`list-group-item ${active === 'profile' ? 'active' : ''}`} id = 'profile'>
                         <i className = "fa fa-user">
                             <span className="d-none d-xl-inline-block">
                                 Profile
