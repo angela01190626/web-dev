@@ -1,0 +1,60 @@
+.wd-banner-image{
+    position: absolute;
+    width: 99%;
+    height: 260px;
+}
+
+.wd-profile-image{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+    z-index: 5;
+}
+
+.wd-avatar-pos{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    z-index: 10;
+    color: gray;
+}
+
+.wd-edit-button{
+    float: right;
+    right:20px;
+    bottom: -1px;
+    position: absolute;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: gray;
+    background-color: black;
+    text-decoration: none;
+    width: 20%;
+}
+
+.wd-edit-text{
+    text-decoration: none;
+}
+
+.wd-save-button{
+    float: right;
+    right:20px;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    border-color: white;
+}
+
+.wd-table{
+    margin: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 20px;
+    width: 100%;
+}

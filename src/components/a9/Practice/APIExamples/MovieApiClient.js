@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]);
-
     useEffect(() =>
             fetch('http://localhost:4000/api/movies')
                 .then(response => response.json())
@@ -16,10 +15,9 @@ const MovieApiClient = () => {
             .then(() => setMovies(
                 movies.filter(m => m !== movie)));
 
-    const [movie, setMovie] = useState({_id:(new Date()).getTime() + '',title:'', rating: 2.5});
+    const [movie, setMovie] = useState({_id:(new Date()).getTime() + '', rating: 2.5});
     const onMovieTitleChange = (event) =>
         setMovie({...movie, title: event.target.value});
-
     const createMovieClickHandler = () =>
         fetch('http://localhost:4000/api/movies', {
             method: 'POST',
@@ -29,7 +27,7 @@ const MovieApiClient = () => {
             }
         })
             .then(response => response.json())
-            .then((movies) => setMovies(movies));
+            .then(movies => setMovies(movies));
 
     const saveMovie = () =>
         fetch(`http://localhost:4000/api/movies/${movie._id}`, {
@@ -40,16 +38,11 @@ const MovieApiClient = () => {
             }
         })
             .then(response => response.json())
-            .then((movies) => setMovies(movies));
+            .then(movies => setMovies(movies));
 
     return(
         <div>
-            <h2>{JSON.stringify(movies)}</h2>
-            <button
-                onClick={createMovieClickHandler}
-                className="btn btn-success float-end">
-                Create
-            </button>
+            {/*<h2>{JSON.stringify(movies)}</h2>*/}
             <h2>Movies</h2>
             <ul className="list-group">
                 {
@@ -57,22 +50,27 @@ const MovieApiClient = () => {
                         <li className="list-group-item"
                             key={movie._id}>
                             {movie.title} {movie.rating}
-                            <input className="form-control"
-                                   defaultValue={movie.title}
-                                   onChange={onMovieTitleChange}
-                                   style={{width: "70%"}}/>
-                            <button
-                                onClick={saveMovie}
-                                className="btn btn-primary ms-2 float-end">
-                                Save
-                            </button>
                             <button onClick={() => setMovie(movie)}
                                     className="btn btn-primary float-end ms-2">
                                 Edit
                             </button>
+                            <button
+                                onClick={createMovieClickHandler}
+                                className="btn btn-success float-end">
+                                Create
+                            </button>
+                            <input className="form-control"
+                                   value={movie.title}
+                                   onChange={onMovieTitleChange}
+                                   style={{width: "70%"}}/>
                             <button onClick={() => deleteMovie(movie)}
                                     className="btn btn-danger float-end">
                                 Delete
+                            </button>
+                            <button
+                                onClick={saveMovie}
+                                className="btn btn-primary ms-2 float-end">
+                                Save
                             </button>
                         </li>
                     )
