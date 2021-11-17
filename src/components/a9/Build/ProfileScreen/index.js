@@ -1,17 +1,17 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import NavigationSidebar from "../NavigationSideBar";
 import ProfileItem from "./ProfileItem";
-import {useDispatch, useSelector} from "react-redux";
 import TweetList from "../TweetList";
 import PostSummaryList from "../PostSummaryList";
-import {fetchProfile} from "../../../../services/profileService";
-
-const selectProfile = (state) => state.profile.profile;
+import {fetchProfile, findProfileById} from "../../../../services/profileService";
+import service from "../../Practice/Movies/service";
 
 const ProfileScreen = () => {
-    const profile = useSelector(selectProfile);
-    const dispatch = useDispatch();
-    useEffect(() =>fetchProfile(dispatch),[])
+
+    const [profile, setProfile] = useState({});
+    useEffect(() =>
+        fetchProfile()
+            .then(profile => setProfile(profile)),[]);
 
     return(
         <div className="row mt-2">

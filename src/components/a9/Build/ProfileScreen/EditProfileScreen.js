@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import NavigationSidebar from "../NavigationSideBar";
 import ProfileItem from "./ProfileItem";
 import {useSelector,useDispatch} from "react-redux";
@@ -7,12 +7,13 @@ import PostSummaryList from "../PostSummaryList";
 import EditProfile from "./EditProfile";
 import {fetchProfile} from "../../../../services/profileService";
 
-const selectProfile = (state) => state.profile.profile;
+// const selectProfile = (state) => state.profile.profile;
 
 const EditProfileScreen = () => {
-    const profile = useSelector(selectProfile);
-    const dispatch = useDispatch();
-    useEffect(() => fetchProfile(dispatch),[])
+    const [profile, setProfile] = useState([]);
+    useEffect(() =>
+        fetchProfile()
+            .then(profile => setProfile(profile)),[]);
 
     return(
         <div className="row mt-2">

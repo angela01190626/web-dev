@@ -1,14 +1,14 @@
-const PROFILE_API = 'http://localhost:4000/api/profile';
+// const PROFILE_API = 'http://localhost:4000/api/profile';
 
-export const fetchProfile = (dispatch) =>
+const PROFILE_API = 'http://localhost:4000/rest/profile';
+
+export const fetchProfile = () =>
     fetch(PROFILE_API)
-        .then(response => response.json())
-        .then(profile =>
-            dispatch({
-                type: 'fetch-profile',
-                profile
-            })
-        );
+        .then(response => response.json());
+
+export const findProfileById = (id) =>
+    fetch(`${URL}/${id}`)
+        .then(response => response.json());
 
 export const editProfile = (dispatch, profile) =>
     fetch(PROFILE_API, {

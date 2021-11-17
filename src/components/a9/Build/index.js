@@ -10,7 +10,7 @@ import ExploreScreen from "./ExploreScreen/ExploreScreen";
 import ProfileScreen from "./ProfileScreen";
 import EditProfileScreen from "./ProfileScreen/EditProfileScreen";
 
-const reducer = combineReducers({tweets: tweets, profile});
+const reducer = combineReducers({tweets: tweets});
 const store = createStore(reducer);
 
 const Build = () => {

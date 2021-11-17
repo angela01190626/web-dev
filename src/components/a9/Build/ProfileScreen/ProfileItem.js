@@ -1,16 +1,16 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Link} from "react-router-dom";
-// import {useDispatch} from "react-redux";
-// import {fetchProfile} from "../../../../services/profileService";
+// import {findProfileById} from "../../../../services/profileService";
+
 
 const ProfileItem = ({profile}) => {
 
-    // const dispatch = useDispatch();
-    // useEffect(() => fetchProfile(dispatch), []);
-
+    // const findProfileById = (profile) =>
+    //     .findProfileById(profile._id)
+    //         .then(profile => setProfile(profile));
     return(
         <>
-            {/*{JSON.stringify(profile)}*/}
+            {JSON.stringify(profile)}
             <div className="row pt-2">
                 <div className="col-1">
                     <a href="/#"><i className="fas fa-long-arrow-alt-left wd-icon-color"/></a>
@@ -27,7 +27,6 @@ const ProfileItem = ({profile}) => {
                         Edit profile
                     </Link>
                 </div>
-
 
                 <div className="mb-2">
                     <h6>{profile.name}</h6>
