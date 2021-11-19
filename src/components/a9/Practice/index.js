@@ -16,8 +16,8 @@ const Practice = () => {
                 Twitter
             </Link>
             <Movies/>
-            <APIExamples/>
-            <ReduxExamples/>
+            {/*<APIExamples/>*/}
+            {/*<ReduxExamples/>*/}
             <Link to="/a7/twitter/home">
                 Build A7
             </Link>

@@ -29,7 +29,7 @@ const EditProfile = () =>{
     return(
         <>
             {/*{JSON.stringify(profile)}*/}
-            {JSON.stringify(profile)}
+            {/*{JSON.stringify(profile)}*/}
             <div className="row pt-2">
                 <div className="col-1">
                     <Link to = "/a9/twitter/profile" onClick={cancelClickHandler}><i className="fas fa-times wd-icon-color"/></Link>
