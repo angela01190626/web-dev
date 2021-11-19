@@ -1,39 +1,44 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {editProfile} from "../../../../services/profileService";
+import {editProfile, fetchProfile} from "../../../../services/profileService";
 
-//const selectProfile = (state) => state.profile.profile;
 
-const EditProfile = ({profile}) =>{
+const EditProfile = () =>{
 
-    const [newProfile, setNewProfile] = useState({...profile});
+    const [profile, setProfile] = useState({});
+    useEffect(() =>
+        fetchProfile()
+            .then(profile => {
+                setProfile(profile)
+            }),[]);
+
     const dispatch = useDispatch();
     const saveClickHandler = () => {
-        console.log(profile)
-        // console.log(newProfile)
-        editProfile(dispatch,newProfile);
+        editProfile(dispatch,profile);
     };
     const cancelClickHandler = () => {
-        setNewProfile({...profile})
+        setProfile({...profile})
     };
     const handleChangeValue = (key,value)=>{
-        setNewProfile({
-            ...newProfile,
+        setProfile({
+            ...profile,
             [key]:value
         })
     }
     return(
         <>
+            {/*{JSON.stringify(profile)}*/}
+            {JSON.stringify(profile)}
             <div className="row pt-2">
                 <div className="col-1">
-                    <Link to = "/a8/twitter/profile" onClick={cancelClickHandler}><i className="fas fa-times wd-icon-color"/></Link>
+                    <Link to = "/a9/twitter/profile" onClick={cancelClickHandler}><i className="fas fa-times wd-icon-color"/></Link>
                 </div>
                 <div className="col-9">
                     <h5>Edit Profile</h5>
                 </div>
                 <div className="col-1">
-                    <Link to = "/a8/twitter/profile" onClick={saveClickHandler}
+                    <Link to = "/a9/twitter/profile" onClick={saveClickHandler}
                           className="btn btn-primary wd-save-button">
                         Save
                     </Link>
@@ -60,7 +65,7 @@ const EditProfile = ({profile}) =>{
                         <tr>
                             <td>
                                 <textarea
-                                    value={newProfile.name}
+                                    value={profile.name}
                                     className="form-control"
                                     onChange={(event) => handleChangeValue('name',event.target.value)}
                                     style={{
@@ -83,7 +88,7 @@ const EditProfile = ({profile}) =>{
                     <tbody>
                     <tr>
                             <textarea
-                                value={newProfile.bio}
+                                value={profile.bio}
                                 className="form-control"
                                 onChange={(event) => handleChangeValue('bio',event.target.value)}
                                 style={{
@@ -105,7 +110,7 @@ const EditProfile = ({profile}) =>{
                     <tbody>
                     <tr>
                             <textarea
-                                value={newProfile.location}
+                                value={profile.location}
                                 className="form-control"
                                 onChange={(event) => handleChangeValue('location',event.target.value)}
                                 style={{
@@ -128,7 +133,7 @@ const EditProfile = ({profile}) =>{
                     <tr>
                         <td>
                             <textarea
-                                value={newProfile.website}
+                                value={profile.website}
                                 className="form-control"
                                 onChange={(event) => handleChangeValue('website',event.target.value)}
                                 style={{
@@ -152,7 +157,7 @@ const EditProfile = ({profile}) =>{
                     <tr>
                         <input className="wd-input-date"
                                type="date"
-                               value={newProfile.dateOfBirth}
+                               value={profile.dateOfBirth}
                                onChange={(event) => handleChangeValue('dateOfBirth',event.target.value)}
                         />
                     </tr>

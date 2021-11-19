@@ -11,7 +11,7 @@ export const findProfileById = (id) =>
         .then(response => response.json());
 
 export const editProfile = (dispatch, profile) =>
-    fetch(PROFILE_API, {
+    fetch(`${PROFILE_API}/${profile._id}`, {
         method: 'PUT',
         body: JSON.stringify(profile),
         headers: {

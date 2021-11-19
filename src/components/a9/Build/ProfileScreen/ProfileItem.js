@@ -5,12 +5,9 @@ import {Link} from "react-router-dom";
 
 const ProfileItem = ({profile}) => {
 
-    // const findProfileById = (profile) =>
-    //     .findProfileById(profile._id)
-    //         .then(profile => setProfile(profile));
     return(
         <>
-            {JSON.stringify(profile)}
+            {/*{JSON.stringify(profile[0])}*/}
             <div className="row pt-2">
                 <div className="col-1">
                     <a href="/#"><i className="fas fa-long-arrow-alt-left wd-icon-color"/></a>
@@ -22,7 +19,7 @@ const ProfileItem = ({profile}) => {
                 <div style={{"position": "relative",paddingBottom:'320px'}}>
                     <img src={profile.bannerPicture} className="wd-banner-image" alt=""/>
                     <img src={profile.profilePicture} className="wd-profile-image" alt=""/>
-                    <Link to ="/a8/twitter/editProfile"
+                    <Link to ="/a9/twitter/editProfile"
                           className="btn btn-primary wd-edit-button">
                         Edit profile
                     </Link>
