@@ -5,7 +5,7 @@ import {useSelector,useDispatch} from "react-redux";
 import TweetList from "../TweetList";
 import PostSummaryList from "../PostSummaryList";
 import EditProfile from "./EditProfile";
-import {fetchProfile} from "../../../../services/profileService";
+import {fetchProfile} from "../../../../services/profileServiceA9";
 
 
 const EditProfileScreen = () => {

@@ -3,7 +3,7 @@ import NavigationSidebar from "../NavigationSideBar";
 import ProfileItem from "./ProfileItem";
 import TweetList from "../TweetList";
 import PostSummaryList from "../PostSummaryList";
-import {fetchProfile} from "../../../../services/profileService";
+import {fetchProfile} from "../../../../services/profileServiceA9";
 import service from "../../Practice/Movies/service";
 
 const ProfileScreen = () => {
