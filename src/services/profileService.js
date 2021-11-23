@@ -1,6 +1,6 @@
 // const PROFILE_API = 'http://localhost:4000/api/profile';
 
-const PROFILE_API = 'http://localhost:4000/rest/profile';
+const PROFILE_API = 'https://safe-thicket-27885.herokuapp.com/api/profile';
 
 export const fetchProfile = () =>
     fetch(PROFILE_API)
