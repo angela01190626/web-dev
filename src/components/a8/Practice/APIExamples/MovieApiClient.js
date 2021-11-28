@@ -1,16 +1,19 @@
 import React, {useEffect, useState} from "react";
+// const MOVIE_API = 'http://localhost:4000/api/movies';
+
+const MOVIE_API = 'https://safe-thicket-27885.herokuapp.com/api/movies';
 
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() =>
-            fetch('https://safe-thicket-27885.herokuapp.com/api/movies')
+            fetch(MOVIE_API)
                 .then(response => response.json())
                 .then(movies => setMovies(movies))
         , []);
 
     const deleteMovie = (movie) =>
-        fetch(`https://safe-thicket-27885.herokuapp.com/api/movies/${movie._id}`, {
+        fetch(`${MOVIE_API}/${movie._id}`, {
             method: 'DELETE',
         })
             .then(() => setMovies(
@@ -23,7 +26,7 @@ const MovieApiClient = () => {
         setMovie({...movie, title: event.target.value});
 
     const createMovieClickHandler = () =>
-        fetch('https://safe-thicket-27885.herokuapp.com/api/movies', {
+        fetch(MOVIE_API, {
             method: 'POST',
             body: JSON.stringify({
                 ...movie,
@@ -38,7 +41,7 @@ const MovieApiClient = () => {
             .then((movies) => setMovies(movies));
 
     const saveMovie = () =>
-        fetch(`https://safe-thicket-27885.herokuapp.com/api/movies/${movie._id}`, {
+        fetch(`${MOVIE_API}/${movie._id}`, {
             method: 'PUT',
             body: JSON.stringify(movie),
             headers: {
