@@ -1,4 +1,5 @@
-const URL = 'https://safe-thicket-27885.herokuapp.com/restmovies';
+// const URL = 'https://safe-thicket-27885.herokuapp.com/rest/movies';
+const URL = 'http://localhost:4000/rest/movies';
 
 export const findAllMovies = () =>
     fetch(URL)
